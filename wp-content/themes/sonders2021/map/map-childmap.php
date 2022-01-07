@@ -21,9 +21,8 @@
 
   <div class="child-map-sidebar dark-bg">
   	<button class="close-sidebar"><i class="fal fa-times"></i></button>
-
 	<div class="sidebar-contents">
-
+		<?php the_content(); ?>
 	</div>
   </div>
 

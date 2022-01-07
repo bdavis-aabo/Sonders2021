@@ -8,117 +8,179 @@
 }
 .nomobile { display: none; }
 
+/*** DEVICES SMALLER THAN LANDSCAPE IPAD (ONLY 800 X 600) ***/
+@media (min-width: 800px) and (min-height: 600px){
+	.map-message { display: none; }
+     .nomobile { display: block; }
+
+	.header { height: 78px; position: relative; }
+
+	.mapblock-container { margin-top: 0; height: calc(100vh - 259px); position: relative; z-index: 1; overflow: hidden;
+	  .mapBlock { position: absolute; opacity: 1; transform: scale(1); transition: all 1.6s ease-in-out; z-index: 0; overflow: hidden;
+	    &.hyde { opacity: 0; transform: scale(4); z-index: -100; }
+
+	   button.map-back { position: absolute; left: percentage(20/2400); top: percentage(20/1215); background: $dkblue; color: $white; border: 1px solid $white;
+		 font-size: 13px; z-index: 5;
+		 .fal { padding-right: 12px; }
+	   }
+
+	   .child-map-sidebar { position: fixed; top: 0; right: 0; width: 450px; height: 100%; display: flex; flex-wrap: wrap; justify-content: center; z-index: 100;
+		   align-items: center; transition: all 666ms ease-in-out;
+		   .close-sidebar { position: absolute; top: 10px; left: 10px; border: 1px solid $white;  border-radius: 100%; background: none; font-size: 24px; width: 32px; height: 32px;
+			   color: $white; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; line-height: 1px;
+			.fal { padding: 2px 0 0; }
+		   }
+		   .sidebar-contents { color: $white; flex-basis: 85%;
+			   img { width: 45px; height: 45px; }
+			   h1 { font-size: 28px; line-height: 1.25em; margin-bottom: 8px; }
+			   p  { line-height: 1.85em; font-size: .95em; }
+		   }
+
+		   &.is-hidden { transform: translateX(100%); }
+	   }
+
+	    .map-child-link { display: inline-block; position: absolute; z-index: 2; width: 32px; height: 32px; margin: 0; cursor: pointer;
+		 filter: drop-shadow(0 0 5px rgba($black, .3)); transition: all 333ms ease-in-out;
+		 &:hover  { filter: none; transform: scale(1.75); }
+
+		 &[data-target="#sonders-learning-center"] { left: percentage(743/2400); top: percentage(502/1215); }
+		 &[data-target="#flourish-park"]        { left: percentage(475/2400); top: percentage(300/1215); }
+		 &[data-target="#evernew-park"]         { left: percentage(1380/2400); top: percentage(681/1215); }
+	    }
+
+	    .map-point { display: inline-block; position: absolute; z-index: 2; width: 32px; height: 32px; margin: 0; cursor: pointer;
+		 filter: drop-shadow(0 0 5px rgba($black, .3)); transition: all 333ms ease-in-out;
+		 &:hover  { filter: none; transform: scale(1.75); }
+
+		 //main points
+		 &[data-target="#serene-park"]          { left: percentage(245/2400); top: percentage(782/1215); }
+		 &[data-target="#trails-pedestrian"]    { left: percentage(1553/2400); top: percentage(180/1215); }
+		 &[data-target="#trails-horse-trail"]   { left: percentage(500/2400); top: percentage(70/1215); }
+		 &[data-target="#the-greens"]           { left: percentage(1575/2400); top: percentage(780/1215); }
+		 &[data-target="#sonders-park"]         { left: percentage(1052/2400); top: percentage(837/1215); }
+		 &[data-target="#wag-around-dog-park"]  { left: percentage(1830/2400); top: percentage(20/1215); }
+		 &[data-target="#fort-collins-country-club"] { left: percentage(1830/2400); top: percentage(1057/1215); }
+
+		 //builder icons
+		 &[data-target="#bridgewater_homes"]                    { left: percentage(2150/2400); top: percentage(620/1215); }
+		 &[data-target="#thrive_homes_-_single-family_ranches"] { left: percentage(1629/2400); top: percentage(482/1215); }
+		 &[data-target="#thrive_homes_-_alley-load_courtyard"]  { left: percentage(1830/2400); top: percentage(482/1215); }
+		 &[data-target="#thrive_homes_-_townhomes"]             { left: percentage(1763/2400); top: percentage(617/1215); }
+
+		 //learning center points
+		 &[data-target="#sonders_learning_center"] { left: percentage(1565/2400); top: percentage(719/1215); }
+		 &[data-target="#pool_hot_tub_and_deck"]   { left: percentage(1349/2400); top: percentage(700/1215); }
+		 &[data-target="#poolside_barbecue_area"]  { left: percentage(1513/2400); top: percentage(891/1215); }
+		 &[data-target="#arts_studio"]             { left: percentage(1257/2400); top: percentage(292/1215); }
+		 &[data-target="#body_studio"]             { left: percentage(1021/2400); top: percentage(230/1215); }
+		 &[data-target="#ideas_studio"]             { left: percentage(1345/2400); top: percentage(400/1215); }
+		 &[data-target="#pickleball_courts"]       { left: percentage(600/2400); top: percentage(450/1215); }
+		 &[data-target="#horseshoe_pit"]           { left: percentage(851/2400); top: percentage(216/1215); }
+		 &[data-target="#bocce_ball"]              { left: percentage(725/2400); top: percentage(176/1215); }
+		 &[data-target="#sonders_learning_center_park"] { left: percentage(871/2400); top: percentage(742/1215); }
+		 &[data-target="#ev_charging_station"]     { left: percentage(1217/2400); top: percentage(1054/1215); }
+		 &[data-target="#bike_racks"]              { left: percentage(1761/2400); top: percentage(779/1215); }
+
+		 //flourish park points
+		 &[data-target="#steel_garden_troughs"]  { left: percentage(1180/2400); top: percentage(388/1215); }
+		 &[data-target="#sensory_garden_touch"]  { left: percentage(1177/2400); top: percentage(551/1215); }
+		 &[data-target="#sensory_garden_smell"]  { left: percentage(1154/2400); top: percentage(714/1215); }
+		 &[data-target="#sensory_garden_see"]    { left: percentage(1009/2400); top: percentage(739/1215); }
+		 &[data-target="#sensory_garden_hear"]   { left: percentage(925/2400); top: percentage(850/1215); }
+		 &[data-target="#grill_and_picnic_area"] { left: percentage(1267/2400); top: percentage(275/1215); }
+		 &[data-target="#food_share_area"]       { left: percentage(1200/2400); top: percentage(160/1215); }
+		 &[data-target="#seating_areas"]         { left: percentage(1436/2400); top: percentage(571/1215); }
+
+		 //evernew park points
+		 &[data-target="#evernew_park_pavilion"] { left: percentage(890/2400); top: percentage(236/1215); }
+		 &[data-target="#bike_racks"]             { left: percentage(930/2400); top: percentage(70/1215); }
+		 &[data-target="#grasscrete_drive_and_ev_charging_station"] { left: percentage(643/2400); top: percentage(511/1215); }
+		 &[data-target="#oil_jack_display"]       { left: percentage(1044/2400); top: percentage(807/1215); }
+		 &[data-target="#wind_turbines"]          { left: percentage(1672/2400); top: percentage(511/1215); }
+		 &[data-target="#picnic_area"]            { left: percentage(1517/2400); top: percentage(571/1215); }
+		 &[data-target="#solar_flowers"]           { left: percentage(1412/2400); top: percentage(184/1215); }
+		 &[data-target="#native_seed_wildflower_beds"] { left: percentage(1267/2400); top: percentage(648/1215); }
+	    }
+
+	    .feature-card-overlay { position: fixed; top: 0; left: 0; bottom: 0; height: 100%; width: 100%; background: rgba($black, .95); opacity: 1;
+		 transform: translateY(0); transition: all 666ms ease-in-out; z-index: 10; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+		 &.hyde { opacity: 0; transform: translateY(100%); }
+		 .feature-card { flex-basis: 98%; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; background: $white;
+		   transition-delay: 333ms; opacity: 1; transition: all 666ms ease-in-out; position: relative;
+		   &.hyde { opacity: 0; display: none; }
+
+		   .close-card { position: absolute; right: 20px; top: 5px; height: 20px; width: 20px; font-size: 28px; background: transparent; border: none;
+			   &:focus { outline: none; }
+		   }
+
+
+		   .card-left { flex-basis: 50%; }
+		   .card-right { flex-basis: 50%; padding: 0 1rem;
+			h2 { font-size: 24px; line-height: 1.25em; font-weight: 400; margin: 0 0 8px; font-family: 'Vollkorn' }
+			h3 { font-family: 'Roboto'; font-weight: 700; text-transform: uppercase; font-size: 16px; color: $aqua; margin: 20px 0 5px; }
+			p  { font-size: .95em; line-height: 1.5em; margin-bottom: 8px;
+				&:last-child { margin-bottom: 0; }
+			}
+		   }
+		 }
+	    }
+	  }
+	}
+
+	.map-footer { height: 80px; background: $ltblue; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+	  .footer-top { border-bottom: 0; padding: 0 1rem; flex-basis: 95%; justify-content: space-between;
+	    .footer-logo-container {
+		 svg { max-width: 150px; }
+	    }
+	    .footer-right { flex-basis: 70%; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center;
+		 .disclaimer { text-align: right; font-size: 10px; flex-basis: 80%; padding-right: 20px; }
+		 img { width: 28px; }
+	    }
+	  }
+	}
+}
+
 /*** EXTRA LARGE DEVICES : Large Desktops, 1200px + (720 x 540) ***/
 @media (min-width: 1024px) and (min-height: 768px){
-  .map-message { display: none; }
-  .nomobile { display: block; }
-  .header { height: 145px; position: relative; }
+	.header { height: 145px; position: relative; }
 
-  .mapblock-container { margin-top: 0; height: calc(100vh - 259px); position: relative; z-index: 1; overflow: hidden;
-    .mapBlock { position: absolute; opacity: 1; transform: scale(1); transition: all 1.6s ease-in-out; z-index: 0; overflow: hidden;
-      &.hyde { opacity: 0; transform: scale(4); z-index: -100; }
+	.mapblock-container { margin-top: 0; height: calc(100vh - 259px); position: relative; z-index: 1; overflow: hidden;
+		.mapBlock {
+			.map-child-link,
+			.map-point { width: 40px; height: 40px; }
 
-      button.map-back { position: absolute; left: percentage(20/2400); top: percentage(20/1215); background: $dkblue; color: $white; border: 1px solid $white;
-        font-size: 13px; z-index: 5;
-        .fal { padding-right: 12px; }
-      }
+			.child-map-sidebar { position: fixed; top: 0; right: 0; width: 425px; height: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+				transition: all 666ms ease-in-out;
+				.close-sidebar { font-size: 28px; width: 36px; height: 36px; }
+				.sidebar-contents { color: $white; flex-basis: 80%;
+	  				img { width: 75px; height: 75px; }
+	  				h1 { font-size: 36px; line-height: 1.25em; }
+	  				p  { line-height: 1.85em; }
+	  		   }
+	  		   &.is-hidden { transform: translateX(100%); }
+		 	}
 
-      .map-child-link { display: inline-block; position: absolute; z-index: 2; width: 40px; height: 40px; margin: 0; cursor: pointer;
-        filter: drop-shadow(0 0 5px rgba($black, .3)); transition: all 333ms ease-in-out;
-        &:hover  { filter: none; transform: scale(1.75); }
+			.feature-card-overlay { position: fixed; top: 0; left: 0; bottom: 0; height: 100%; width: 100%; background: rgba($black, .95); opacity: 1; transform: translateY(0);
+				transition: all 666ms ease-in-out; z-index: 10; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+				&.hyde { opacity: 0; transform: translateY(100%); }
+				.feature-card { flex-basis: 95%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: $white;
+					transition-delay: 333ms; opacity: 1; transition: all 666ms ease-in-out; position: relative;
+					&.hyde { opacity: 0; display: none; }
+					.close-card { position: absolute; right: 20px; top: 5px; height: 20px; width: 20px; font-size: 28px; background: transparent; border: none;
+						&:focus { outline: none; }
+					}
 
-        &[data-target="#sonders-learning-center"] { left: percentage(743/2400); top: percentage(502/1215); }
-        &[data-target="#flourish-park"]        { left: percentage(475/2400); top: percentage(300/1215); }
-        &[data-target="#evernew-park"]         { left: percentage(1380/2400); top: percentage(681/1215); }
-      }
-
-      .map-point { display: inline-block; position: absolute; z-index: 2; width: 40px; height: 40px; margin: 0; cursor: pointer;
-        filter: drop-shadow(0 0 5px rgba($black, .3)); transition: all 333ms ease-in-out;
-        &:hover  { filter: none; transform: scale(1.75); }
-
-        //main points
-        &[data-target="#serene-park"]          { left: percentage(245/2400); top: percentage(782/1215); }
-        &[data-target="#trails-pedestrian"]    { left: percentage(1553/2400); top: percentage(180/1215); }
-        &[data-target="#trails-horse-trail"]   { left: percentage(500/2400); top: percentage(70/1215); }
-        &[data-target="#the-greens"]           { left: percentage(1575/2400); top: percentage(780/1215); }
-        &[data-target="#sonders-park"]         { left: percentage(1052/2400); top: percentage(837/1215); }
-        &[data-target="#wag-around-dog-park"]  { left: percentage(1830/2400); top: percentage(20/1215); }
-        &[data-target="#fort-collins-country-club"] { left: percentage(1830/2400); top: percentage(1057/1215); }
-
-        //builder icons
-        &[data-target="#bridgewater_homes"]                    { left: percentage(2150/2400); top: percentage(620/1215); }
-        &[data-target="#thrive_homes_-_single-family_ranches"] { left: percentage(1629/2400); top: percentage(482/1215); }
-        &[data-target="#thrive_homes_-_alley-load_courtyard"]  { left: percentage(1830/2400); top: percentage(482/1215); }
-        &[data-target="#thrive_homes_-_townhomes"]             { left: percentage(1763/2400); top: percentage(617/1215); }
-
-        //learning center points
-        &[data-target="#sonders_learning_center"] { left: percentage(1565/2400); top: percentage(719/1215); }
-        &[data-target="#pool_hot_tub_and_deck"]   { left: percentage(1349/2400); top: percentage(700/1215); }
-        &[data-target="#poolside_barbecue_area"]  { left: percentage(1513/2400); top: percentage(891/1215); }
-        &[data-target="#arts_studio"]             { left: percentage(1257/2400); top: percentage(292/1215); }
-        &[data-target="#body_studio"]             { left: percentage(1021/2400); top: percentage(230/1215); }
-        &[data-target="#ideas_studio"]             { left: percentage(1345/2400); top: percentage(400/1215); }
-        &[data-target="#pickleball_courts"]       { left: percentage(600/2400); top: percentage(450/1215); }
-        &[data-target="#horseshoe_pit"]           { left: percentage(851/2400); top: percentage(216/1215); }
-        &[data-target="#bocce_ball"]              { left: percentage(725/2400); top: percentage(176/1215); }
-        &[data-target="#sonders_learning_center_park"] { left: percentage(871/2400); top: percentage(742/1215); }
-        &[data-target="#ev_charging_station"]     { left: percentage(1217/2400); top: percentage(1054/1215); }
-        &[data-target="#bike_racks"]              { left: percentage(1761/2400); top: percentage(779/1215); }
-
-        //flourish park points
-        &[data-target="#steel_garden_troughs"]  { left: percentage(1180/2400); top: percentage(388/1215); }
-        &[data-target="#sensory_garden_touch"]  { left: percentage(1177/2400); top: percentage(551/1215); }
-        &[data-target="#sensory_garden_smell"]  { left: percentage(1154/2400); top: percentage(714/1215); }
-        &[data-target="#sensory_garden_see"]    { left: percentage(1009/2400); top: percentage(739/1215); }
-        &[data-target="#sensory_garden_hear"]   { left: percentage(925/2400); top: percentage(850/1215); }
-        &[data-target="#grill_and_picnic_area"] { left: percentage(1267/2400); top: percentage(275/1215); }
-        &[data-target="#food_share_area"]       { left: percentage(1200/2400); top: percentage(160/1215); }
-        &[data-target="#seating_areas"]         { left: percentage(1436/2400); top: percentage(571/1215); }
-
-        //evernew park points
-        &[data-target="#evernew_park_pavillion"] { left: percentage(890/2400); top: percentage(236/1215); }
-        &[data-target="#bike_racks"]             { left: percentage(930/2400); top: percentage(70/1215); }
-        &[data-target="#grasscrete_drive_and_ev_charging_station"] { left: percentage(643/2400); top: percentage(511/1215); }
-        &[data-target="#oil_jack_display"]       { left: percentage(1044/2400); top: percentage(807/1215); }
-        &[data-target="#wind_turbines"]          { left: percentage(1672/2400); top: percentage(511/1215); }
-        &[data-target="#picnic_area"]            { left: percentage(1517/2400); top: percentage(571/1215); }
-        &[data-target="#solar_flowers"]           { left: percentage(1412/2400); top: percentage(184/1215); }
-        &[data-target="#native_seed_wildflower_beds"] { left: percentage(1267/2400); top: percentage(648/1215); }
-      }
-
-      .feature-card-overlay { position: fixed; top: 0; left: 0; bottom: 0; height: 100%; width: 100%; background: rgba($black, .95); opacity: 1;
-        transform: translateY(0); transition: all 666ms ease-in-out; z-index: 10; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-        &.hyde { opacity: 0; transform: translateY(100%); }
-        .feature-card { flex-basis: 95%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: $white;
-          transition-delay: 333ms; opacity: 1; transition: all 666ms ease-in-out; position: relative;
-          &.hyde { opacity: 0; display: none; }
-
-          .close-card { position: absolute; right: 20px; top: 5px; height: 20px; width: 20px; font-size: 28px; background: transparent; border: none;
-			&:focus { outline: none; }
+					.card-left { flex-basis: 55%; }
+					.card-right { flex-basis: 45%; padding: 0 5rem;
+						h2 { font-size: 32px; font-weight: 400; margin: 0 0 15px; font-family: 'Vollkorn' }
+						h3 { font-family: 'Roboto'; font-weight: 700; text-transform: uppercase; font-size: 16px; color: $aqua; margin: 0 0 5px; }
+						p  { font-size: 16px; line-height: 2em; }
+					}
+				}
+			}
 		}
+	}
 
-
-          .card-left { flex-basis: 55%; }
-          .card-right { flex-basis: 45%; padding: 0 5rem;
-            h2 { font-size: 32px; font-weight: 400; margin: 0 0 15px; font-family: 'Vollkorn' }
-            h3 { font-family: 'Roboto'; font-weight: 700; text-transform: uppercase; font-size: 16px; color: $aqua; margin: 0 0 5px; }
-            p  { font-size: 14px; line-height: 2em; }
-          }
-        }
-      }
-    }
-  }
-
-  .map-footer { height: 80px; background: $ltblue; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-    .footer-top { border-bottom: 0; padding: 0 1rem; flex-basis: 95%; justify-content: space-between;
-      .footer-logo-container {
-        svg { max-width: 150px; }
-      }
-      .footer-right { flex-basis: 70%; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center;
-        .disclaimer { text-align: right; font-size: 12px; flex-basis: 80%; padding-right: 20px; }
-      }
-    }
-  }
 }
 
 /*** EXTRA LARGE DEVICES : Large Desktops, 1200px + ***/

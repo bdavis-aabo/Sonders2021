@@ -16,10 +16,11 @@ $ltgray: #e8f0ec;
 $dkgray: #464547;
 $red:    red;
 
-.peach-bg { background-color: $peach; color: $white; }
-.ltgray-bg { background-color: $ltgray; }
-.ltblue-bg { background-color: $ltblue; }
-.white-bg  { background-color: $white; }
+.peach-bg    { background-color: $peach; color: $white; }
+.ltgray-bg     { background-color: $ltgray; }
+.ltblue-bg     { background-color: $ltblue; }
+.white-bg	    { background-color: $white; }
+.dark-bg		{ background-color: rgba($black,.95); }
 
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');

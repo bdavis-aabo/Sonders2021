@@ -99,6 +99,12 @@
             Request Information
             <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
           </a>
+		<?php if(get_field('homebuilder_link') != ''): ?>
+		<a href="<?php echo get_field('homebuilder_link') ?>" class="link link--arrowed builderContact-btn" title="<?php the_title() ?>" target="_blank">
+	          Visit <?php the_title() ?>
+	          <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+	     </a>
+		<?php endif; ?>
         </div>
       </div>
     </section>

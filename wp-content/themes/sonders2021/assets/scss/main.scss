@@ -806,6 +806,9 @@
           .builder-name { flex-basis: 100%; }
           .office-left,
           .office-right { flex-basis: 49%; }
+		.office-bottom {
+			.builderContact-btn { margin-right: 25px; }
+		}
         }
       }
     }
