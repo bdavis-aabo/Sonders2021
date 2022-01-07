@@ -1,0 +1,173 @@
+// LOCK STROLL WHEN NAV OR CONTACT FORM ARE OPEN
+html, body {
+  &.stuck { overflow: hidden; }
+}
+
+// NAV BUTTON
+.nav-btn { background: transparent; border: none; border-radius: 0; cursor: pointer; z-index: 101;
+  width: 30px; height: 12px; transform: translateY(-50%) rotate(0deg); transition: transform 666ms ease-in-out;
+  &:focus { outline: 0; }
+  .nav-iconbar { display: block; position: absolute; height: 1px; width: 100%; background: $white; box-shado: 0 0 2px rgba($black,.3); opacity: 1; left: 0; top: 0;
+    transform: rotate(0deg); transition: 0.25s ease-in-out;
+    &:nth-child(1) { top: 0; }
+    &:nth-child(2),
+    &:nth-child(3) { top: 9px; }
+    &:nth-child(4) { top: 18px; }
+  }
+  &.open {
+    .nav-iconbar {
+      &:nth-child(1) { top: 12px; opacity: 0; }
+      &:nth-child(2) { transform: rotate(-45deg); transition-delay: .3s; }
+      &:nth-child(3) { transform: rotate(45deg); transition-delay: .3s; }
+      &:nth-child(4) { top: 12px; opacity: 0; }
+    }
+  }
+}
+
+// HEADER & NAVIGATION STYLES
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: 2; transition: background 666ms ease;
+  &:after { content: ''; position: absolute; z-index: -1; height: 100%; background-color: rgba($white, .95); transform: scaleY(0); opacity: 0; transform-origin: top;
+    transition: all .4s ease; top: 0; left: 0; width: 100%; }
+  &.white-bg {
+    &:after { transform: none; opacity: 1; }
+    .header-top {
+      .navbar-logo {
+        svg {
+          #sonders { fill: $dkgray; stroke: transparent; }
+          #foco    { fill: #61b0bc; stroke: #61b0bc; }
+        }
+      }
+      .nav-btn {
+        .nav-iconbar { background: $dkgray; }
+      }
+    }
+    .header-bottom { }
+  }
+
+  .header-top,
+  .header-bottom { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; }
+  .header-top { justify-content: space-between; padding: 0 1rem; position: relative; z-index: 2;
+    &.open {
+      .nav-btn {
+        .nav-iconbar { background: $dkgray; }
+      }
+      .navbar-logo {
+        svg {
+          #sonders { fill: $dkgray; stroke: transparent; }
+          #foco    { fill: #61b0bc; stroke: #61b0bc; }
+        }
+      }
+    }
+    .navbar-logo { flex-basis: 40%; padding: 10px 0;
+      svg { max-width: 200px; max-height: 58px;
+        #sonders { fill: $white; stroke: transparent; }
+        #foco { fill: $white; stroke: $white; }
+      }
+    }
+  }
+  .header-bottom { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba($white, .95); z-index: 1;
+    transform: translateY(-100%); opacity: 0; transition: all 666ms ease-in-out;
+
+    &.is-visible { transform: translateY(0); opacity: 1; }
+    .navigation { flex-basis: 100%; flex-grow: 1; padding: 0;
+      #main-menu-navbar {
+        .main-menu { list-style: none; padding: 0; font-weight: 300;
+          .menu-item { padding: .75rem 1.5rem;
+            a { color: $dkgray; text-transform: uppercase; font-weight: 400; letter-spacing: 1px;
+              &:focus { outline: 0; }
+              &:hover { color: $aqua; }
+            }
+
+            &.contactBtn { background: $aqua; font-weight: 400;
+              a { color: $white; }
+            }
+            &.current-menu-item {
+              a { color: $aqua; }
+            }
+          }
+        }
+      }
+    }
+    .contactBtn { flex-basis: 100%;
+      &.nomobile { display: none; }
+    }
+  }
+}
+
+
+/*** SMALL DEVICES : Landscape phones, 576px + ***/
+@media (min-width: 576px){
+
+}
+
+/*** IPHONE X : Landscape ***/
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+
+}
+
+/*** MEDIUM DEVICES : Tablets, 768px + ***/
+@media (min-width: 768px){
+
+}
+
+/*** LARGE DEVICES : Desktops, 992px and up ***/
+@media (min-width: 992px){
+  .header {
+    .header-top { padding: 0 2rem;
+      .navbar-logo { flex-basis: auto; padding: 10px 0;
+        svg { max-width: 250px; max-height: 72px;
+          #sonders { fill: $white; stroke: $white; }
+        }
+      }
+      .nav-btn { display: none; }
+    }
+    .header-bottom { position: unset; transform: translateY(0); opacity: 1; justify-content: space-between; background: transparent;
+      border-top: .5px solid rgba($white, .5); border-bottom: .5px solid rgba($white, .5); margin-top: 5px;
+      .navigation { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: rgba($black,.1);
+        #main-menu-navbar { font-size: .9em; margin-left: auto;
+          .main-menu { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; margin-bottom: 0; margin-left: 1rem;
+            .menu-item { padding: .75rem 1rem;
+              a { color: $white; }
+              &.mobileonly { display: none; }
+
+              &.current-menu-item { background: $white;
+                a { color: $aqua; }
+              }
+            }
+          }
+        }
+        .contactBtn { width: auto; font-size: .9em; letter-spacing: 1px; padding: .75rem 1.25rem; height: 100%; font-weight: 700; margin-left: auto;
+          &.nomobile { display: block; flex-basis: auto; }
+        }
+      }
+    }
+    &.white-bg {
+      .header-bottom { border-top: 1px solid rgba($dkgray, .5); border-bottom: 1px solid rgba($dkgray, .5); background: transparent;
+        .navigation { background: transparent;
+          #main-menu-navbar {
+            .main-menu {
+              .menu-item {
+                a { color: $dkgray;
+                  &:hover { color: $aqua; }
+                }
+                &.current-menu-item {
+                  a { color: $aqua; }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*** EXTRA LARGE DEVICES : Large Desktops, 1200px + ***/
+@media (min-width: 1200px){
+
+}
+
+/*
+:::::::::: CUSTOM MEDIA QUERIES IF NEEDED ::::::::::
+*/
