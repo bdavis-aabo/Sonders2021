@@ -8,6 +8,7 @@ wp-content/cache/*
 wp-content/upgrade/*
 wp-content/uploads/*
 wp-content/plugins/*
+wp-content/mu-plugins/*
 config.codekit3
 sitemap.*
 googleb3cd24c95e72f6f6.html
