@@ -361,6 +361,14 @@
       }
     }
   }
+
+	.video-overlay { position: fixed; top: 0; left: 0; bottom: 0; transform: translateY(100%); opacity: 0; transition: all 666ms ease-in-out; width: 100%; z-index: 100; background: rgba($black,.8);
+		&.is-visible { opacity: 1; transform: translateY(0); }
+		.closeVideo-btn { position: absolute; right: 20px; top: 20px; font-size: 36px; color: $white; z-index: 10; cursor: pointer; }
+		.embed-container { position: absolute; left: 0; right: 0; top: 50%; margin-top: -28.1%; padding-bottom: 56.25%; height: 0; overflow: hidden;
+			iframe, object, embed { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 80%; height: 100%; }
+		}
+	}
 }
 
 // BLOG PARENT AND SINGLE STYLES

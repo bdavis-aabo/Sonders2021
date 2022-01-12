@@ -61,9 +61,17 @@
               </figure>
               <div class="floorplan-details">
                 <h4 class="floorplan-name"><?php echo '0' . $_i . '. ' . get_sub_field('floorplan_name') ?></h4>
-                <p class="floorplan-info">
-                  <?php echo get_sub_field('floorplan_details')  ?>
-                </p>
+               <p class="floorplan-info">
+               	<?php echo get_sub_field('floorplan_details')  ?>
+               </p>
+
+			<p class="floorplan-video-link">
+			<?php if(get_sub_field('floorplan_video') != ''): ?>
+				<a class="link link--arrowed floorplan-tour-btn" data-target="#<?php echo str_replace(' ', '-',strtolower(get_sub_field('floorplan_name') . '-video')) ?>">Video Tour <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?></a>
+			<?php else: ?>
+				&nbsp;
+			<?php endif; ?>
+			</p>
               </div>
             </li>
             <?php $_i++; endwhile; ?>
@@ -79,6 +87,17 @@
         </div>
       </div>
     </section>
+
+	<?php while(have_rows('homebuilder_floorplans')): the_row(); ?>
+		<?php if(get_sub_field('floorplan_video') != ''): ?>
+		<div class="video-overlay" id="<?php echo str_replace(' ', '-',strtolower(get_sub_field('floorplan_name') . '-video')) ?>">
+			<a class="closeVideo-btn"><i class="fal fa-times"></i></a>
+			<article class="floorplan-video embed-container">
+				<iframe src="<?php echo get_sub_field('floorplan_video') ?>" frameborder="0" webkitAllowFullScreen mosallowfullscreen allowFullSreen></iframe>
+			</article>
+		</div>
+		<?php endif; ?>
+	<?php endwhile; //end loop for video popups ?>
     <?php endif; ?>
 
     <?php //space for video for builder - not available yet  ?>

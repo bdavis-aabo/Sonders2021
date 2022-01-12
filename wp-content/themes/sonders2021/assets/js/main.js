@@ -111,6 +111,17 @@ $(document).ready(function(){
 	$('.top-btn').click(function(){
 		$(window).scrollTop(0);
 	});
+
+	// Video Player
+	$('.floorplan-tour-btn').click(function(){
+		var video = $(this).attr('data-target');
+		$(video).addClass('is-visible');
+	});
+	$('.closeVideo-btn').click(function(){
+		$(this).parent('.video-overlay').removeClass('is-visible');
+	});
+
+
 });
 
 
