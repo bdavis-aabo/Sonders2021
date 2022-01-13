@@ -113,15 +113,18 @@ $(document).ready(function(){
 	});
 
 	// Video Player
+	var player;
+	function onYouTubePlayerAPIReady(){
+		player = new YT.Player('player');
+	}
 	$('.floorplan-tour-btn').click(function(){
 		var video = $(this).attr('data-target');
 		$(video).addClass('is-visible');
 	});
 	$('.closeVideo-btn').click(function(){
 		$(this).parent('.video-overlay').removeClass('is-visible');
+		$(this).sibling('.floorplan-video > ' + player).stopVideo();
 	});
-
-
 });
 
 

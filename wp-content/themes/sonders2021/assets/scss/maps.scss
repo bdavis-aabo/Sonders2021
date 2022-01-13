@@ -105,7 +105,7 @@
 	    .feature-card-overlay { position: fixed; top: 0; left: 0; bottom: 0; height: 100%; width: 100%; background: rgba($black, .95); opacity: 1;
 		 transform: translateY(0); transition: all 666ms ease-in-out; z-index: 10; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
 		 &.hyde { opacity: 0; transform: translateY(100%); }
-		 .feature-card { flex-basis: 98%; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; background: $white;
+		 .feature-card { flex-basis: 98%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: $white;
 		   transition-delay: 333ms; opacity: 1; transition: all 666ms ease-in-out; position: relative;
 		   &.hyde { opacity: 0; display: none; }
 
@@ -114,12 +114,13 @@
 		   }
 
 		   .card-left { flex-basis: 50%; }
-		   .card-right { flex-basis: 50%; padding: 0 1rem;
-			h2 { font-size: 24px; line-height: 1.25em; font-weight: 400; margin: 0 0 8px; font-family: 'Vollkorn' }
-			h3 { font-family: 'Roboto'; font-weight: 700; text-transform: uppercase; font-size: 16px; color: $aqua; margin: 20px 0 5px; }
-			p  { font-size: .95em; line-height: 1.5em; margin-bottom: 8px;
-				&:last-child { margin-bottom: 0; }
-			}
+		   .card-right { flex-basis: 50%; padding: 0 2rem;
+				h2 { font-size: 24px; line-height: 1.25em; font-weight: 400; margin: 0 0 8px; font-family: 'Vollkorn' }
+   				h3 { font-family: 'Roboto'; font-weight: 700; text-transform: uppercase; font-size: 16px; color: $aqua; margin: 20px 0 5px; }
+   				p  { font-size: .95em; line-height: 1.5em; margin-bottom: 8px;
+   					&:last-child { margin-bottom: 0; }
+   				}
+
 		   }
 		 }
 	    }
