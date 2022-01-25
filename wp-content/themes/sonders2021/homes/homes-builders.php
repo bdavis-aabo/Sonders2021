@@ -49,7 +49,7 @@
             if(have_rows('homebuilder_model_details')): while(have_rows('homebuilder_model_details')): the_row();
               if($post->post_name != 'thrive-home-builders'):
               if(get_sub_field('square_footage') != ''):
-              echo 'Approx. ' . get_sub_field('square_footage') . ' sq ft | ' . get_sub_field('beds') . ' beds | ' . get_sub_field('baths') . ' baths<br/>';
+              echo 'Approx. ' . get_sub_field('square_footage') . ' sq ft | ' . get_sub_field('beds') . ' beds | ' . get_sub_field('baths') . ' baths';
               endif;
             else:
               echo 'coming soon';
