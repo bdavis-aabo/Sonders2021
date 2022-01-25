@@ -90,7 +90,7 @@ img.aligncenter, .aligncenter { margin: 10px auto; }
     }
   }
 }
-.top-btn { color: $dkgray; text-align: center; background: none; border: none; position: fixed; right: 20px; bottom: 60px; opacity: 0; transition: opacity 666ms ease;
+.top-btn { color: $dkgray; text-align: center; background: none; border: none; position: fixed; right: 20px; bottom: 60px; opacity: 0; transition: opacity 666ms ease; z-index: 5;
 	&.is-visible { opacity: 1; }
 	&:focus { outline: none; }
 	&.link--arrowed { display: inline-block; height: 2rem; line-height: 2rem;
