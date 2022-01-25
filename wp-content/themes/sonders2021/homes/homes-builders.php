@@ -58,8 +58,8 @@
 
             if(get_field('homebuilder_pricing') != ''):
               echo 'from the ' . get_field('homebuilder_pricing');
-	    else:
-		    echo '<br/>&nbsp;';
+	    			else:
+		    			echo '&nbsp;';
             endif;
             ?>
           </p>
