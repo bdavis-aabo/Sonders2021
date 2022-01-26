@@ -496,7 +496,15 @@
     &.latestnews-section {
       .news-content-container {
         .news-article-container { justify-content: space-between; align-items: flex-start; flex-wrap: wrap;
-          .news-left { flex-basis: 57.5%; }
+          .news-left { flex-basis: 57.5%;
+						.news-article {
+							.article-titlebox {
+								p { padding-right: 15%;
+									&.postmeta { padding-right: 0; }
+								}
+							}
+						}
+					}
           .news-right { flex-basis: 40%; }
         }
       }
@@ -626,26 +634,37 @@
   // BLOG PARENT AND SINGLE STYLES
   .blog-section {
     &.blog-index-section {
-      .news-article-container { flex-basis: 95%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
+      .news-article-container { flex-basis: 80%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
         .news-article { flex-basis: 48%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; margin-bottom: 2.5rem;
-          &:first-child { flex-basis: 100%;
-            .featured-image { flex-basis: 50%; }
-            .article-titlebox { flex-basis: 48%; padding-top: 0; }
+          &:first-child { flex-basis: 100%; justify-content: center;
+            .featured-image { margin-bottom: 2rem; }
+            .article-titlebox { padding-top: 0; text-align: center; }
           }
-          .article-titlebox { flex-basis: 90%; padding-top: 1.5rem;
+          .article-titlebox { flex-basis: 100%; padding-top: 1.5rem;
             .postmeta { font-size: .95em;
               a { color: $aqua; }
             }
             .article-title {
               a { color: $dkgray; }
             }
-            p { font-size: 15px; line-height: 28px; }
+            p { font-size: 15px; line-height: 28px; padding: 0; }
           }
         }
       }
     }
   }
 
+	.single-post {
+		.blog-section {
+			&.blog-index-section {
+				.news-article-container {
+					.news-article {
+						.article-titlebox { text-align: left; }
+					}
+				}
+			}
+		}
+	}
 }
 
 /*** LARGE DEVICES : Desktops, 992px and up ***/
@@ -827,12 +846,9 @@
 	// BLOG PARENT AND SINGLE STYLES
   .blog-section {
     &.blog-index-section {
-      .news-article-container { flex-basis: 80%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
+      .news-article-container { flex-basis: 70%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
         .news-article { flex-basis: 48%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; margin-bottom: 2.5rem;
-          &:first-child { flex-basis: 100%;
-            .featured-image { flex-basis: 50%; }
-            .article-titlebox { flex-basis: 48%; padding-top: 0; }
-          }
+          &:first-child { flex-basis: 100%; }
           .article-titlebox { flex-basis: 90%; padding-top: 1.5rem;
             .postmeta { font-size: .95em;
               a { color: $aqua; }

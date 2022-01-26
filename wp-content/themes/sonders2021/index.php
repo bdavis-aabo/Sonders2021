@@ -19,7 +19,7 @@
                 <?php the_title(); ?>
               </a>
             </h3>
-          <?php the_content(); ?>
+          <div class="content-container"><?php the_content(); ?></div>
         </div>
       </article>
       <?php endwhile; ?>
