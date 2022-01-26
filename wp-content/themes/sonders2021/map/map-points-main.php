@@ -59,6 +59,9 @@
       </div> <?php //end card-left ?>
       <div class="card-right">
         <div class="card-contents">
+					<?php if(get_sub_field('point_name') == 'Fort Collins Country Club'): ?>
+						<img src="<?php bloginfo('template_directory') ?>/assets/images/maps/FCCC-Logo.jpg" alt="<?php echo get_sub_field('point_name') . ' Logo' ?>" class="img-fluid fccc-logo" />
+					<?php endif; ?>
           <h3 class="blue-txt"><?php bloginfo('name') ?></h3>
           <h2 class="card-title"><?php echo get_sub_field('point_name') ?></h2>
           <?php echo get_sub_field('point_content') ?>
