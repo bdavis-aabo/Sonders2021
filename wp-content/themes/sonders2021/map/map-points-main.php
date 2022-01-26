@@ -15,8 +15,13 @@
 <?php
   // Builder Map Points
   while(have_rows('map_builders')): the_row();
-    $_builderID     = strtolower(str_replace(' ', '-', get_sub_field('builder_name')));
-    $_builderTarget = '#' . strtolower(str_replace(' ', '_', get_sub_field('builder_name')));
+		//if(get_sub_field('builder_name') == 'Bridgewater Homes'){
+			$_builderID     = strtolower(str_replace(' ', '-', get_sub_field('builder_name')));
+	    $_builderTarget = '#' . strtolower(str_replace(' ', '_', get_sub_field('builder_name')));
+		// } else {
+		// 	$_builderID = 'thrive-homes';
+		// 	$_builderTarget = '#thrive_homes';
+		// }
 ?>
   <a class="map-point" data-target="<?php echo $_builderTarget ?>" data-parent="#<?php echo $post->post_name ?>">
     <img src="<?php bloginfo('stylesheet_directory') ?>/assets/images/maps/builder-icon.svg" alt="<?php echo get_sub_field('builder_name') ?>" class="img-fluid" />

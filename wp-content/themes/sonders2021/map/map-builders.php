@@ -1,6 +1,7 @@
 
   <?php while(have_rows('map_builders')): the_row();
-    $_builderID     = strtolower(str_replace(' ', '_', get_sub_field('builder_name')));
+		$_builder = get_sub_field('builder_name');
+    $_builderID     = strtolower(str_replace(' ', '_', $_builder));
     $_builderImages = get_sub_field('builder_images');
     $_imageCount = count($_builderImages);
   ?>
@@ -31,7 +32,10 @@
       <div class="card-contents">
         <h3 class="blue-txt"><?php bloginfo('name') ?></h3>
         <h2 class="card-title"><?php echo get_sub_field('builder_name') ?></h2>
-        <?php echo get_sub_field('builder_content') ?>
+        <?php echo get_sub_field('builder_content'); ?>
+				<?php if($_builder != 'Bridgewater Homes'): ?>
+					<a class="contactBtn builderContact-btn btn ltblue-btn" data-target="contactBox" data-builder="Thrive Home Builders">sign up <i class="fal fa-chevron-right"></i></a>
+				<?php endif; ?>
       </div>
     </div>
   </article>

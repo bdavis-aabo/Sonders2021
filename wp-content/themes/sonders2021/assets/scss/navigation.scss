@@ -69,8 +69,8 @@ html, body {
     transform: translateY(-100%); opacity: 0; transition: all 666ms ease-in-out;
 
     &.is-visible { transform: translateY(0); opacity: 1; }
-    .navigation { flex-basis: 100%; flex-grow: 1; padding: 0;
-      #main-menu-navbar {
+    .navigation { flex-basis: 100%; flex-grow: 1; padding: 0; position: relative;
+      #main-menu-navbar { flex-basis: 100%; flex-grow: 1;
         .main-menu { list-style: none; padding: 0; font-weight: 300;
           .menu-item { padding: .75rem 1.5rem;
             a { color: $dkgray; text-transform: uppercase; font-weight: 400; letter-spacing: 1px;
@@ -90,6 +90,7 @@ html, body {
     }
     .contactBtn { flex-basis: 100%;
       &.nomobile { display: none; }
+			&.contactCallout { position: absolute; top: 0; right: 0; }
     }
   }
 }
@@ -127,7 +128,7 @@ html, body {
       .navigation { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: rgba($black,.1);
         #main-menu-navbar { font-size: .9em; margin-left: auto;
           .main-menu { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; margin-bottom: 0; margin-left: 1rem;
-            .menu-item { padding: .75rem 1rem;
+            .menu-item { padding: .75rem 1.5rem;
               a { color: $white; }
               &.mobileonly { display: none; }
 

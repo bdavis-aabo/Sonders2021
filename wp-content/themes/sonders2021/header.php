@@ -68,7 +68,7 @@
           //'walker'          =>  new WP_Bootstrap_Navwalker()
         ));
         ?>
-        <button class="ltblue-btn btn contactBtn nomobile" data-target="contactBox">stay informed</button>
+        <button class="ltblue-btn btn contactBtn contactCallout nomobile" data-target="contactBox">stay informed</button>
       </nav>
 
 

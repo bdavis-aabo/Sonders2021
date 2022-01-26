@@ -56,10 +56,12 @@ img.aligncenter, .aligncenter { margin: 10px auto; }
 
 
 // BUTTONS
-.btn { text-transform: uppercase; border-radius: 0; padding: 8px 25px;
-  &.ltblue-btn { background: $aqua; color: $white; border: none;  }
+.btn { text-transform: uppercase; border-radius: 0; padding: 8px 25px; cursor: pointer;
+  &.ltblue-btn { background: $aqua; color: $white !important; border: none; }
   &.green-btn  { background: $green; color: $white; }
   &.blue-btn   { background: $dkblue; color: $white; }
+
+	.fal { padding-left: 16px; }
 }
 
 .outline-btn { background: rgba($black,.2); border: 1px solid $white; border-radius: 0; color: $white; pointer: cursor; text-decoration: none;
