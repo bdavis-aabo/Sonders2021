@@ -104,7 +104,7 @@
               a { color: $aqua; }
             }
             a {
-              h3 { font-size: 24px; margin-bottom: 8px; transition: color 666ms ease; }
+              h3 { font-size: 24px; margin-bottom: 8px; transition: color 666ms ease; font-weight: 500 !important;}
               &:hover {
                 h3 { color: $aqua; }
               }
@@ -383,7 +383,7 @@
           .postmeta { font-size: .95em;
             a { color: $aqua; }
           }
-          .article-title {
+          .article-title { font-weight: 500 !important;
             a { color: $dkgray; }
           }
           p { font-size: 15px; line-height: 28px;
