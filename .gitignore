@@ -35,6 +35,11 @@ wp-config.php
 bourbon/
 .htaccess
 
+BingSiteAuth.xml
+email-images/*
+survey-images/*
+
+
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
 #wp-content/*
@@ -46,6 +51,7 @@ wp-content/plugins/hello.php
 
 # ignore specific themes
 wp-content/themes/twenty*/
+wp-content/themes/sonders/*
 
 #ignore ga.php
 wp-content/themes/sonders2021/assets/_inc/ga.php
