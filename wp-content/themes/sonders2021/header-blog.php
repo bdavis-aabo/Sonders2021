@@ -23,16 +23,7 @@
   <![endif]-->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-	<?php /*
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-50ZGDT255Z"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-50ZGDT255Z');
-	</script>
-  */ ?>
+	<?php include('assets/_inc/ga.php'); ?>
 
   <!-- Segment Pixel - RET-WatersEdge-Sonders-FortCollins - DO NOT MODIFY -->
   <script src="https://secure.adnxs.com/seg?add=29026280&t=1" type="text/javascript"></script>
