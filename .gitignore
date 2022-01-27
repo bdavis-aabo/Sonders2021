@@ -1,6 +1,8 @@
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
 
+
+dev/*
 wp-admin/*
 wp-includes/*
 wp-content/backup/*
