@@ -2,7 +2,7 @@
 !wp-content/
 
 
-dev/*
+
 wp-admin/*
 wp-includes/*
 wp-content/backup/*
@@ -38,6 +38,7 @@ bourbon/
 BingSiteAuth.xml
 email-images/*
 survey-images/*
+dev/*
 
 
 # ignore everything in the "wp-content" directory, except:
