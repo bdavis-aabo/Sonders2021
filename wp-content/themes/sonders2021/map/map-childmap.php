@@ -76,6 +76,7 @@
           <h3 class="aqua-txt"><?php the_title(); ?></h3>
           <h2 class="card-title"><?php echo get_sub_field('point_name') ?></h2>
           <?php echo get_sub_field('point_content') ?>
+					<a class="continue-btn" data-target="<?php echo '#' . $_pointID ?>" data-parent="#<?php echo $post->post_name ?>">Continue Your Tour <i class="fal fa-chevron-right"></i></a>
         </div>
       </div>
     </article>

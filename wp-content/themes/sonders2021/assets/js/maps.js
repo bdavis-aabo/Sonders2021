@@ -49,6 +49,12 @@ $(document).ready(function(){
 		$('.feature-card-overlay').addClass('hyde');
 	});
 
+	$('.continue-btn').click(function(){
+		var parent = $(this).parent('.feature-card');
+		$(parent).addClass('hyde');
+		$('.feature-card-overlay').addClass('hyde');
+	});
+
 	$(document).keyup(function(e){
     		if(e.key === 'Escape'){
      		$('.feature-card').addClass('hyde');

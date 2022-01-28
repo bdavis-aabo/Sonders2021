@@ -109,7 +109,8 @@
 		   transition-delay: 333ms; opacity: 1; transition: all 666ms ease-in-out; position: relative;
 		   &.hyde { opacity: 0; display: none; }
 
-		   .close-card { position: absolute; right: 20px; top: 5px; height: 20px; width: 20px; font-size: 28px; background: transparent; border: none;
+		   .close-card { position: absolute; right: 20px; top: 5px; height: 20px; width: 20px; font-size: 28px; background: transparent; border: 1px solid $dkgray;
+				 padding: 3px 5px; border-radius: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; color: $dkgray;
 			   &:focus { outline: none; }
 		   }
 
@@ -166,7 +167,7 @@
 				.feature-card { flex-basis: 95%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: $white;
 					transition-delay: 333ms; opacity: 1; transition: all 666ms ease-in-out; position: relative;
 					&.hyde { opacity: 0; display: none; }
-					.close-card { position: absolute; right: 20px; top: 5px; height: 20px; width: 20px; font-size: 28px; background: transparent; border: none;
+					.close-card { position: absolute; right: 20px; top: 5px; height: 32px; width: 32px; font-size: 28px; background: transparent;
 						&:focus { outline: none; }
 					}
 

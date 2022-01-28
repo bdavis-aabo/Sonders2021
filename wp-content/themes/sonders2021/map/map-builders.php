@@ -36,6 +36,10 @@
 				<?php if($_builder != 'Bridgewater Homes'): ?>
 					<a class="contactBtn builderContact-btn btn ltblue-btn" data-target="contactBox" data-builder="Thrive Home Builders">sign up <i class="fal fa-chevron-right"></i></a>
 				<?php endif; ?>
+
+				<p style="margin-top: 8px;">
+					<a class="continue-btn" data-target="<?php echo '#' . $_pointID ?>" data-parent="#<?php echo $post->post_name ?>">Continue Your Tour <i class="fal fa-chevron-right"></i></a>
+				</p>
       </div>
     </div>
   </article>
