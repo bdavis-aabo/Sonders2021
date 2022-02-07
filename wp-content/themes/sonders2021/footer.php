@@ -28,7 +28,7 @@
 
   <?php get_template_part('contact/contact-form') ?>
 
-	<?php /* if(is_front_page()): ?>
+	<?php if(is_front_page()): ?>
 	<button class="forum-btn" onclick="location.href='/forum'">
   	<img src="<?php bloginfo('template_directory') ?>/assets/images/sonders_outline.svg" class="outline-logo" alt="Sonders Forum" />
   	<div class="forum-contents">
@@ -37,7 +37,7 @@
     	<p>Join us as we finalize a remarkable new home community.</p>
   	</div>
 	</button>
-	<?php endif; */ ?>
+	<?php endif; ?>
 
 <?php wp_footer(); ?>
 
