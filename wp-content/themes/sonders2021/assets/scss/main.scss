@@ -17,7 +17,7 @@
 // Homepage Styles
 .homepage-section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
 
-  h2 { font-family: 'Roboto'; font-weight: 700; text-transform: uppercase; font-size: 16px; color: $aqua; margin: 0 0 5px; }
+  h2 { font-family: 'Roboto'; font-display: fallback; font-weight: 700; text-transform: uppercase; font-size: 16px; color: $aqua; margin: 0 0 5px; }
   h1 { font-size: 30px; font-weight: 400; margin: 0 0 15px; }
   p  { font-size: 15px; line-height: 1.85em; font-weight: 400; padding-left: 0; padding-right: 1rem; }
 
@@ -32,7 +32,7 @@
 
     .heroimage-caption-container { position: absolute; top: 50%; left: 50%; width: 95%; transform: translate(-50%, -50%); z-index: 1;
       .heroimage-caption { text-align: center; position: relative;
-        h2.message { color: $white; text-shadow: 0 0 8px rgba($black, .5); opacity: 0; font-family: 'Vollkorn'; font-size: 24px; text-transform: none;
+        h2.message { color: $white; text-shadow: 0 0 8px rgba($black, .5); opacity: 0; font-family: 'Vollkorn'; font-display: fallback; font-size: 24px; text-transform: none;
           font-weight: 400; text-shadow: 0 0 8px rgba($black,.5); position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 100%;
           margin-bottom: 0;
           &.message-one { animation: 10s ease 1s normal forwards 1 message-one; }
@@ -67,7 +67,7 @@
                 img { transition: transform 1s ease-in-out; }
               }
               .card-content {
-                h3 { font-family: 'Roboto'; font-weight: 400; font-size: 15px; color: $dkgray; transition: color 666ms ease; }
+                h3 { font-family: 'Roboto'; font-display: fallback; font-weight: 400; font-size: 15px; color: $dkgray; transition: color 666ms ease; }
               }
               &:hover {
                 .card-img {
@@ -118,8 +118,8 @@
 
 // Page Styles
 .page-section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 2.5rem 0;
-  h1, h2 { font-size: 32px; font-weight: 400; margin: 0 0 15px; font-family: 'Vollkorn' }
-  h3 { font-family: 'Roboto'; font-weight: 700; text-transform: uppercase; font-size: 16px; color: $aqua; margin: 0 0 5px; }
+  h1, h2 { font-size: 32px; font-weight: 400; margin: 0 0 15px; font-family: 'Vollkorn'; font-display: fallback; }
+  h3 { font-family: 'Roboto'; font-display: fallback; font-weight: 700; text-transform: uppercase; font-size: 16px; color: $aqua; margin: 0 0 5px; }
 
   p  { font-size: 15px; line-height: 1.85em; font-weight: 400; padding-left: 1rem; padding-right: 1rem; }
 
@@ -214,7 +214,7 @@
   // HOMEBUILDER PAGE STYLES
   &.homes-section {
     .section-content-container { flex-basis: 90%; text-align: center;
-      h3 { font-family: 'Roboto'; font-weight: 300; font-size: 24px; margin-bottom: 5px; }
+      h3 { font-family: 'Roboto'; font-display: fallback; font-weight: 300; font-size: 24px; margin-bottom: 5px; }
       p  { text-transform: uppercase; color: $aqua; font-size: 18px; font-weight: 700; margin: 0; }
     }
   }
@@ -286,7 +286,7 @@
   .single-builder-section {
     &.page-heroimage { position: relative; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
       .page-hero-caption { flex-basis: 90%; padding-top: 2rem;
-        h3 { color: $aqua; font-family: 'Roboto'; font-weight: 700; text-transform: uppercase; font-size: 16px; margin-bottom: 5px; }
+        h3 { color: $aqua; font-family: 'Roboto'; font-display: fallback; font-weight: 700; text-transform: uppercase; font-size: 16px; margin-bottom: 5px; }
         h2.builder-name { font-size: 30px; font-weight: 400; margin: 0 0 10px; }
         p { line-height: 1.85em; font-size: 15px; }
       }
@@ -324,7 +324,7 @@
     &.builder-collection { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
       .collection-container { flex-basis: 90%; padding: 2rem 0;
         .collection-left {
-          .aqua-txt { color: $aqua; text-transform: uppercase; font-family: 'Roboto'; font-weight: 700; font-size: 16px; margin-bottom: 5px; }
+          .aqua-txt { color: $aqua; text-transform: uppercase; font-family: 'Roboto'; font-display: fallback; font-weight: 700; font-size: 16px; margin-bottom: 5px; }
           h2 { font-weight: 400; }
           p  { font-size: 15px; line-height: 1.85em; }
         }
@@ -340,7 +340,7 @@
             .swiper-slide { flex-basis: 100%; display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;
               .floorplan-image { margin-bottom: 1.25rem; }
               .floorplan-details { flex-basis: 60%; padding-left: 1rem;
-                .floorplan-name { font-family: 'Roboto'; font-weight: 400; text-transform: uppercase; font-size: 15px; }
+                .floorplan-name { font-family: 'Roboto'; font-display: fallback; font-weight: 400; text-transform: uppercase; font-size: 15px; }
                 .floorplan-info { font-weight: 400; font-size: 15px; text-transform: uppercase; letter-spacing: 1px; }
               }
             }
@@ -409,7 +409,7 @@
         a { padding: 0 8px; color: $white; font-size: 1.25em; }
         &:first-child,
         &:last-child { flex-basis: 100%; }
-        &:first-child { font-family: 'Vollkorn'; }
+        &:first-child { font-family: 'Vollkorn'; font-display: fallback; }
         &:last-child { text-transform: uppercase; }
       }
     }

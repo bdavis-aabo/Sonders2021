@@ -39,15 +39,15 @@ function wpt_register_js(){
 	if( !is_admin()){
 		wp_deregister_script('jquery');
 
-    		wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.3.1.min.js', 'jquery', '', true);
-    		wp_enqueue_script('jquery.popper.min', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', 'jquery', '', true);
-    		wp_enqueue_script('jquery.bootstrap.min', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', 'jquery', '', true);
-    		wp_enqueue_script('mapbox.min', '//api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js', 'jquery', '', true);
-    		wp_enqueue_script('mapboxjs.min', '//api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js', 'jquery', '', true);
-    		wp_enqueue_script('aos.min', '//unpkg.com/aos@next/dist/aos.js', 'jquery', '', true);
-    		wp_enqueue_script('youtube.min', '//youtube.com/player_api', 'jquery', '', true);
-    		wp_enqueue_script('fontawesome_cdn.min', '//kit.fontawesome.com/0af1bf54c5.js', 'jquery', '', true);
-    		wp_enqueue_script('swiper.min', '//unpkg.com/swiper@7/swiper-bundle.min.js', 'jquery', '', true);
+    wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.3.1.min.js', 'jquery', '', true);
+    wp_enqueue_script('jquery.popper.min', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', 'jquery', '', true);
+    wp_enqueue_script('jquery.bootstrap.min', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', 'jquery', '', true);
+    wp_enqueue_script('mapbox.min', '//api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js', 'jquery', '', true);
+    wp_enqueue_script('mapboxjs.min', '//api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js', 'jquery', '', true);
+    wp_enqueue_script('aos.min', '//unpkg.com/aos@next/dist/aos.js', 'jquery', '', true);
+    wp_enqueue_script('youtube.min', '//youtube.com/player_api', 'jquery', '', true);
+    wp_enqueue_script('fontawesome_cdn.min', '//kit.fontawesome.com/0af1bf54c5.js', 'jquery', '', true);
+    wp_enqueue_script('swiper.min', '//unpkg.com/swiper@7/swiper-bundle.min.js', 'jquery', '', true);
 		wp_enqueue_script(
      		'jquery.extras.min',
      		get_template_directory_uri() . '/assets/js/main.min.js?v='.filemtime(get_template_directory() . '/assets/js/main.min.js'),
