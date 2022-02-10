@@ -28,6 +28,13 @@
             <li><?php echo get_sub_field('garage') . ' car garage' ?></li>
             <?php endif; ?>
           <?php endwhile; endif; ?>
+					<?php if(get_field('homebuilder_link') != ''): ?>
+					<li class="home-type floorplan-link">
+						<a href="<?php echo get_field('homebuilder_link') ?>" target="_blank" class="link link--arrowed" title="<?php the_title() ?>">
+							View the floorplans <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+	          </a>
+					</li>
+					<?php endif; ?>
         </ul>
       </div>
     </section>
