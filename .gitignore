@@ -2,7 +2,7 @@
 !wp-content/
 
 
-
+portal/*
 wp-admin/*
 wp-includes/*
 wp-content/backup/*
