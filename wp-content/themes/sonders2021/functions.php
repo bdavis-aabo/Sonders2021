@@ -93,6 +93,14 @@ function wpt_map_scripts(){
 }
 add_action('wp_enqueue_scripts','wpt_map_scripts');
 
+function preload_for_css ( $html, $handle, $href, $media ) {
+  if (is_admin()){
+    return $html;
+  }
+  echo '<link rel="stylesheet preload" as="style" href="' . $href . '" media="all">';
+}
+add_filter ( 'style_loader_tag', 'preload_for_css', 10, 4 );
+
 // Custom Post Types
 add_action('init','create_post_type');
 function create_post_type(){
