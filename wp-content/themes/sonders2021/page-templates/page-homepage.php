@@ -8,7 +8,7 @@
   <div class="video-container">
     <div class="video-hero-wrapper">
       <div class="video-wrapper">
-        <video playsinline muted loop autoplay src="<?php bloginfo('template_directory') ?>/assets/video/Web_Intro_v3.mp4" data-object-fit="cover" data-object-position="center" preload="auto" autoplay="true"></video>
+        <video playsinline muted loop autoplay src="<?php bloginfo('template_directory') ?>/assets/video/Web_Intro_v3_1.mp4" data-object-fit="cover" data-object-position="center" preload="auto" autoplay="true"></video>
       </div>
     </div>
   </div>
