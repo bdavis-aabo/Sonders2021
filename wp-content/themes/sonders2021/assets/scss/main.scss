@@ -231,6 +231,11 @@
           .builder-name { font-size: 32px; margin-bottom: 12px; }
           .builder-product { text-transform: uppercase; font-size: 1.1em; }
           .builder-info { text-transform: uppercase; margin-bottom: 30px; }
+					.builder-collections {
+						p { line-height: 28px;
+							strong { text-transform: uppercase; font-weight: normal; }
+						}
+					}
           p { padding-left: 0; margin: 0 0 8px; }
         }
       }

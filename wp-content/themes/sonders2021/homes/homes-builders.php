@@ -42,25 +42,33 @@
         <div class="builder-details">
           <img src="<?php echo $_logo['url'] ?>" alt="<?php the_title() ?>" class="img-fluid" />
           <h2 class="builder-name"><?php the_title() ?></h2>
+					<?php if($post->post_name != 'thrive-home-builders'): ?>
           <p class="builder-product"><?php echo get_field('homebuilder_type') ?></p>
+					<?php else: ?>
+						<?php if(have_rows('homebuilder_collection')): while(have_rows('homebuilder_collection')): the_row(); ?>
+						<p class="builder-product"><?php echo get_sub_field('collection_name') ?></p>
+						<div class="builder-collections"><?php echo get_sub_field('collection_description') ?></div>
+						<?php endwhile; endif; ?>
+					<?php endif; ?>
 
-          <p class="builder-info">
+					<p class="builder-info">
             <?php
-            if(have_rows('homebuilder_model_details')): while(have_rows('homebuilder_model_details')): the_row();
-              if($post->post_name != 'thrive-home-builders'):
-              if(get_sub_field('square_footage') != ''):
-              echo 'Approx. ' . get_sub_field('square_footage') . ' sq ft | ' . get_sub_field('beds') . ' beds | ' . get_sub_field('baths') . ' baths';
-              endif;
-            else:
-              echo 'coming soon';
-            endif;
-            endwhile; endif;
+						if($post->post_name != 'thrive-home-builders'):
+            	if(have_rows('homebuilder_model_details')): while(have_rows('homebuilder_model_details')): the_row();
 
-            if(get_field('homebuilder_pricing') != ''):
-              echo 'from the ' . get_field('homebuilder_pricing');
-	    			else:
-		    			echo '&nbsp;';
+              	if(get_sub_field('square_footage') != ''):
+              		echo 'Approx. ' . get_sub_field('square_footage') . ' sq ft | ' . get_sub_field('beds') . ' beds | ' . get_sub_field('baths') . ' baths';
+              	endif;
+            	endwhile; endif;
+
+							if(get_field('homebuilder_pricing') != ''):
+	              echo 'from the ' . get_field('homebuilder_pricing');
+		    			else:
+			    			echo '&nbsp;';
+	            endif;
             endif;
+
+
             ?>
           </p>
 
