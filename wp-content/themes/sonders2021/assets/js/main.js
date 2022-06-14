@@ -125,6 +125,13 @@ $(document).ready(function(){
 		$(this).parent('.video-overlay').removeClass('is-visible');
 		$(this).sibling('.floorplan-video > ' + player).stopVideo();
 	});
+
+	$('.play-btn').click(function(){
+		$('#builder-video').addClass('is-visible');
+	});
+	$('#builder-video > .close-btn').click(function(){
+		$(this).parent('#builder-video').removeClass('is-visible');
+	});
 });
 
 

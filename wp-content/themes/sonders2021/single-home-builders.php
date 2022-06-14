@@ -107,7 +107,33 @@
 	<?php endwhile; //end loop for video popups ?>
     <?php endif; ?>
 
-    <?php //space for video for builder - not available yet  ?>
+  <?php if(have_rows('homebuilder_video')):  ?>
+		<?php while(have_rows('homebuilder_video')): the_row();
+			$_image = get_sub_field('video_image'); $_mobImage = get_sub_field('video_mobile'); $_video = get_sub_field('video_url');
+		?>
+		<section class="single-builder-section builder-video-image">
+			<div class="builder-image-container">
+				<picture>
+	        <source media="(max-width: 520px)" srcset="<?php echo $_mobImage['url'] ?>">
+	        <img src="<?php echo $_image['url'] ?>" alt="<?php echo $_image['alt'] ?>" class="video-img img-fluid" />
+	      </picture>
+				<div class="builder-image-caption">
+					<h2>About <?php the_title(); ?></h2>
+					<button class="play-btn white-btn play-video"><i class="fal fa-play-circle"></i> Play Video</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="video-overlay dark-bg" id="builder-video">
+			<a class="closeVideo-btn"><i class="fal fa-times"></i></a>
+			<article class="builder-video embed-container">
+				<iframe src="<?php echo $_video ?>?h=dff63df3a7&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Bridgewater Homes at Sonders Fort Collins"></iframe>
+			</article>
+		</section>
+
+		<?php endwhile; ?>
+	<?php endif; ?>
+
 
     <section class="single-builder-section builder-office-section">
       <div class="builder-office-container">
