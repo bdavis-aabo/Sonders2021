@@ -127,7 +127,7 @@
 		<section class="video-overlay dark-bg" id="builder-video">
 			<a class="closeVideo-btn"><i class="fal fa-times"></i></a>
 			<article class="builder-video embed-container">
-				<iframe src="<?php echo $_video ?>?h=dff63df3a7&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Bridgewater Homes at Sonders Fort Collins"></iframe>
+				<iframe src="<?php echo $_video ?>?h=dff63df3a7&badge=0&autopause=0&player_id=0&app_id=58479&byline=0&" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Bridgewater Homes at Sonders Fort Collins"></iframe>
 			</article>
 		</section>
 
