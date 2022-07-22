@@ -107,6 +107,8 @@
 	<?php endwhile; //end loop for video popups ?>
     <?php endif; ?>
 
+
+
   <?php if(have_rows('homebuilder_video')):  ?>
 		<?php while(have_rows('homebuilder_video')): the_row();
 			$_image = get_sub_field('video_image'); $_mobImage = get_sub_field('video_mobile'); $_video = get_sub_field('video_url');

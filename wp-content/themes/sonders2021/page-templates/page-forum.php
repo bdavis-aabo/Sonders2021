@@ -23,9 +23,9 @@
 				<?php
 				if(is_page('sonders-forum')):
         	echo do_shortcode('[contact-form-7 id="318" title="Forum Submission"]');
-				elseif(is_page('sonders-forum-survey-4')): ?>
+				elseif(is_page('sonders-forum-survey-5')): ?>
 				<script>
-					(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd0Z6sQOW6aMVgEXNR1UnOc23wqbCmolcL1xWObIvg2N7.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");
+					(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgdxUBLG_2Bzm7As7ultFwnYXRHz7IUtWNm6b7jxZoshlm5Q.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");
 				</script>
 				<?php endif; ?>
         </div>
