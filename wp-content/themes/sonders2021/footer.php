@@ -33,7 +33,7 @@
 		<div class="forum-button-container">
 			<?php echo file_get_contents(get_template_directory_uri() . '/assets/images/sonders_outline.svg') ?>
 			<?php while(have_rows('forum_callout')): the_row(); ?>
-				<button class="forum-btn" onclick="location.href='/forum'">
+				<button class="forum-btn" onclick="location.href='/sonders-forum'">
 			  	<div class="forum-contents">
 			    	<div class="blue-bg">
 			    		<h3><?php echo get_sub_field('callout_title') ?></h3>
