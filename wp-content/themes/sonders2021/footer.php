@@ -29,14 +29,27 @@
   <?php get_template_part('contact/contact-form') ?>
 
 	<?php if(is_front_page()): ?>
-	<button class="forum-btn" onclick="location.href='/forum'">
-  	<img src="<?php bloginfo('template_directory') ?>/assets/images/sonders_outline.svg" class="outline-logo" alt="Sonders Forum" />
-  	<div class="forum-contents">
-    	<h1>Sonders Forum</h1>
-    	<hr>
-    	<p>Join us as we finalize a remarkable new home community.</p>
-  	</div>
-	</button>
+		<?php if(have_rows('forum_callout')): ?>
+		<div class="forum-button-container">
+			<?php echo file_get_contents(get_template_directory_uri() . '/assets/images/sonders_outline.svg') ?>
+			<?php while(have_rows('forum_callout')): the_row(); ?>
+				<button class="forum-btn" onclick="location.href='/forum'">
+			  	<div class="forum-contents">
+			    	<div class="blue-bg">
+			    		<h3><?php echo get_sub_field('callout_title') ?></h3>
+			    	</div>
+			    	<div class="white-xbg">
+			    		<p><?php echo get_sub_field('callout_content') ?></p>
+							<div class="start">
+								<p>Start the Survey </p><?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
+							</div>
+			    	</div>
+			  	</div>
+				</button>
+			<?php endwhile; ?>
+		</div>
+
+		<?php endif; ?>
 	<?php endif; ?>
 
 <?php wp_footer(); ?>

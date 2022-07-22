@@ -20,8 +20,10 @@ $(document).ready(function(){
   $(window).scroll(function(){
     if($(this).scrollTop() > 100){
       $('.header').not('.no-scroll-effect').addClass('white-bg');
+			$('.forum-button-container .st0').addClass('blue-stroke');
     } else {
       $('.header').not('.no-scroll-effect').removeClass('white-bg');
+			$('.forum-button-container .st0').removeClass('blue-stroke');
     }
   });
 
