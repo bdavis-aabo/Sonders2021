@@ -129,7 +129,7 @@ html, body {
     }
     .header-bottom { position: unset; transform: translateY(0); opacity: 1; justify-content: space-between; background: transparent;
       border-top: .5px solid rgba($white, .5); border-bottom: .5px solid rgba($white, .5); margin-top: 5px;
-      .navigation { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: rgba($black,.1);
+      .navigation { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: rgba($black,.3);
         #main-menu-navbar { font-size: .9em; margin-left: auto;
           .main-menu { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; margin-bottom: 0; margin-left: 1rem;
             .menu-item { padding: .75rem 1.5rem; position: relative;
@@ -141,7 +141,7 @@ html, body {
               }
 
 							// submenu mobile styles
-							.sub-menu { margin: 0; padding: .5rem 1.5rem; position: absolute; top: 100%; left: 0; width: 250px; display: none; opacity: 0; background: rgba(35,31,32,.1);
+							.sub-menu { margin: 0; padding: .5rem 1.5rem; position: absolute; top: 100%; left: 0; width: 250px; display: none; opacity: 0; background: rgba($black,.3);
 								.menu-item { padding: .75rem 0; }
 							}
 
