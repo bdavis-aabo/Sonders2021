@@ -72,18 +72,22 @@ html, body {
     .navigation { flex-basis: 100%; flex-grow: 1; padding: 0; position: relative;
       #main-menu-navbar { flex-basis: 100%; flex-grow: 1;
         .main-menu { list-style: none; padding: 0; font-weight: 300;
-          .menu-item { padding: .75rem 1.5rem;
+          .menu-item { padding: .75rem 1.5rem; cursor: pointer;
             a { color: $dkgray; text-transform: uppercase; font-weight: 400; letter-spacing: 1px;
               &:focus { outline: 0; }
               &:hover { color: $aqua; }
             }
-
             &.contactBtn { background: $aqua; font-weight: 400;
               a { color: $white; }
             }
             &.current-menu-item {
               a { color: $aqua; }
             }
+
+						// submenu mobile styles
+						.sub-menu { margin: 0 0 0 1.5rem; padding: 0; list-style: none;
+							.menu-item { padding: .75rem 0; }
+						}
           }
         }
       }
@@ -128,13 +132,22 @@ html, body {
       .navigation { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; background: rgba($black,.1);
         #main-menu-navbar { font-size: .9em; margin-left: auto;
           .main-menu { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; margin-bottom: 0; margin-left: 1rem;
-            .menu-item { padding: .75rem 1.5rem;
+            .menu-item { padding: .75rem 1.5rem; position: relative;
               a { color: $white; }
               &.mobileonly { display: none; }
 
               &.current-menu-item { background: $white;
                 a { color: $aqua; }
               }
+
+							// submenu mobile styles
+							.sub-menu { margin: 0; padding: .5rem 1.5rem; position: absolute; top: 100%; left: 0; width: 250px; display: none; opacity: 0; background: rgba(35,31,32,.1);
+								.menu-item { padding: .75rem 0; }
+							}
+
+							&:hover {
+								.sub-menu { display: block; opacity: 1; }
+							}
             }
           }
         }
@@ -154,8 +167,13 @@ html, body {
                 }
                 &.current-menu-item {
                   a { color: $aqua; }
+									.sub-menu {
+										a { color: $dkgray; }
+									}
                 }
               }
+							// submenu mobile styles
+							.sub-menu { background: $white; border: 1px solid rgba($dkgray, .5); border-top: none; }
             }
           }
         }

@@ -115,7 +115,8 @@ function create_post_type(){
     'supports' => array('title','author','excerpt','thumbnail','order','page-attributes','editor'),
     'menu_position' => 16,
     'has_archive' => true,
-    'menu_icon' => 'dashicons-admin-home'
+    'menu_icon' => 'dashicons-admin-home',
+		'show_in_rest'		  => true
   ));
 }
 
