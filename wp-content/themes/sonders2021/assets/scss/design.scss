@@ -128,22 +128,18 @@ img.aligncenter, .aligncenter { margin: 10px auto; }
 }
 
 
-.forum-button-container { position: fixed; left: 10px; bottom: 10px; z-index: 99; width: 350px; height: 250px;
-	svg { position: absolute; left: 0; bottom: 0; width: 200px;
-		.st0 { fill: transparent; stroke: $white; opacity: .5; stroke-width: 1; transition: all 666ms ease-in-out;
-			&.blue-stroke { stroke: $aqua; }
-		}
-	}
+.forum-button-container { position: fixed; left: 10px; bottom: 10px; z-index: 99; width: 95%;
+	svg { display: none; }
 
-	.forum-btn { position: absolute; left: 30px; top: 50%; transform: translateY(-50%); width: 300px; text-align: center; border: 1px solid $dkgray;
-		background: transparent; padding: 0; z-index: 999; font-family: $sans-serif;
+	.forum-btn { position: absolute; left: 10px; bottom: 10px; width: 95%; text-align: center;
+		border: 1px solid $dkgray; background: transparent; padding: 0; z-index: 999; font-family: $sans-serif;
 		&:focus { outline: none !important; }
-		.forum-contents { width: 100%; display: flex; flex-wrap: nowrap; justify-content: center; align-items: stretch;
-			.blue-bg { flex-basis: 25%;
-				h3 { font-family: $serif; padding: 10px; margin-bottom: 0; font-size: 21px; line-height: 24px; }
+		.forum-contents { width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+			.blue-bg { flex-basis: 100%;
+				h3 { font-family: $serif; padding: 5px; margin-bottom: 0; font-size: 18px; line-height: 24px; }
 			}
-			.white-xbg { flex-basis: 70%; background: rgba($white, .6);
-				p { font-size: 14px; padding: 5px 10px; margin-bottom: 0; color: $dkgray; font-weight: bold; text-align: left; }
+			.white-xbg { flex-basis: 100%; background: $white;
+				p { font-size: 14px; padding: 5px 10px; margin-bottom: 0; color: $dkgray; font-weight: bold; text-align: center; }
 				.start { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
 					.arrow-icon { width: 25px; position: unset;
 						g { stroke: $dkgray; fill: transparent; }
@@ -186,13 +182,34 @@ No media query...Bootstrap default
 
 /*** LARGE DEVICES : Desktops, 992px and up ***/
 @media (min-width: 992px){
-	// .forum-btn { position: fixed; left: 0; top: 72%; transform: translateY(-50%); width: 130px; text-align: center; border: none; background: $white;
-  //   padding: 10px 0; box-shadow: 0 0 5px rgba($black,.5); z-index: 999; font-family: $sans-serif;  flex-wrap: wrap; justify-content: center;
-  //   .outline-logo { width: 45%; margin-bottom: 12px; }
-  //   h1 { text-transform: uppercase; font-size: 16px; line-height: 1.5em; font-weight: 400; font-family: $condensed; margin-bottom: 8px; }
-  //   hr { background: $ltblue; width: 80%; }
-  //   p  { font-size: 14px; line-height: 1.5em; }
-  // }
+
+	.forum-button-container { position: fixed; left: 0px; bottom: 0px; z-index: 99; width: 350px; height: 250px;
+		svg { position: absolute; left: 0; bottom: 0; width: 200px; display: block;
+			.st0 { fill: transparent; stroke: $white; opacity: .5; stroke-width: 1; transition: all 666ms ease-in-out;
+				&.blue-stroke { stroke: $aqua; }
+			}
+		}
+
+		.forum-btn { position: absolute; left: 30px; top: 50%; transform: translateY(-50%); width: 300px; text-align: center; border: 1px solid $dkgray;
+			background: transparent; padding: 0; z-index: 999; font-family: $sans-serif;
+			&:focus { outline: none !important; }
+			.forum-contents { width: 100%; display: flex; flex-wrap: nowrap; justify-content: center; align-items: stretch;
+				.blue-bg { flex-basis: 25%;
+					h3 { font-family: $serif; padding: 10px; margin-bottom: 0; font-size: 21px; line-height: 24px; }
+				}
+				.white-xbg { flex-basis: 70%; background: rgba($white, .6);
+					p { font-size: 14px; padding: 5px 10px; margin-bottom: 0; color: $dkgray; font-weight: bold; text-align: left; }
+					.start { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
+						.arrow-icon { width: 25px; position: unset;
+							g { stroke: $dkgray; fill: transparent; }
+						}
+						p { margin-bottom: 0; padding-bottom: 0; }
+					}
+				}
+			}
+		}
+	}
+
 }
 
 /*** EXTRA LARGE DEVICES : Large Desktops, 1200px + ***/
