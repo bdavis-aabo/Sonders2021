@@ -10,6 +10,7 @@
       <a href="/advisors" class="link link--arrowed" title="Sonders Advisors & Partnerships">
         View Advisors <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
       </a>
+			<?php echo get_sub_field('vision_secondary') ?>
     </div>
     <?php endwhile; ?>
   </div>
