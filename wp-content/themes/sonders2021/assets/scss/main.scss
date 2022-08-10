@@ -241,6 +241,29 @@
       }
     }
   }
+	&.custom-homes-section { padding-top: 0; padding-bottom: 0;
+		.custom-homes-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+			.home-lots { margin: 0 0 45px; }
+			.home-lots-content { flex-basis: 90%; padding-bottom: 2.5vh;
+				.lot-content-container {
+					p { padding-left: 0; }
+				}
+				.custom-realtors { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+					.realtor { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 30px;
+						&:last-child { margin-bottom: 0; }
+						.logo,
+						.realtor-contact { flex-basis: 50%; }
+						.logo { border-right: 1px solid $dkgray; padding: 0 2.5%; }
+						.realtor-contact {
+							p { line-height: 1.5em;
+								em { font-style: normal; font-weight: bold; color: $aqua; }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
   // LOCATION PAGE STYLES
   &.location-top-section,
@@ -580,7 +603,6 @@
           }
         }
       }
-
     }
     &.parks-section {
       .parks-container { justify-content: space-between;
@@ -593,6 +615,23 @@
         .parks-right { text-align: center; flex-basis: 65%; }
       }
     }
+
+		&.custom-homes-section { padding-top: 0; padding-bottom: 0;
+			.custom-homes-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+				.home-lots { margin: 0 0 45px; }
+				.home-lots-content { flex-basis: 95%; padding-bottom: 2.5vh; display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;
+					.lot-content-container { flex-basis: 80%;
+						p { padding-left: 0; }
+					}
+					.custom-realtors { display: flex; flex-wrap:nowrap; justify-content: center; align-items: stretch; margin-top: 2.5vh;
+						.realtor { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 0; flex-basis: 50%;
+							.logo { flex-basis: 40%; }
+							.realtor-contact { flex-basis: 60%; }
+						}
+					}
+				}
+			}
+		}
 
     // PARKS PAGE STYLES
     &.evernew-park-section {
@@ -801,6 +840,23 @@
         }
       }
     }
+
+		&.custom-homes-section { padding-top: 0; padding-bottom: 0;
+			.custom-homes-container { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; flex-basis: 90%;
+				.home-lots { margin: 0; flex-basis: 42%; }
+				.home-lots-content { flex-basis: 58%; padding-bottom: 0; padding-left: 5%; display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;
+					.lot-content-container { flex-basis: 100%;
+						p { padding-left: 0; }
+					}
+					.custom-realtors { display: flex; flex-wrap:nowrap; justify-content: center; align-items: stretch; margin-top: .5vh;
+						.realtor { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 0; flex-basis: 50%;
+							.logo { flex-basis: 40%; }
+							.realtor-contact { flex-basis: 60%; }
+						}
+					}
+				}
+			}
+		}
 
     // LOCATION PAGE STYLES
     &.location-top-section {

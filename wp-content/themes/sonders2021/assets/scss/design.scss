@@ -15,6 +15,7 @@ $peach:  #f69970;
 $ltgray: #e8f0ec;
 $dkgray: #464547;
 $red:    red;
+$tan:		 #adc8b9;
 
 .peach-bg    { background-color: $peach; color: $white; }
 .ltgray-bg     { background-color: $ltgray; }
@@ -42,6 +43,7 @@ $heading-scale:    4;
 .dkgray-bg { background: $dkgray; color: $white; }
 .blue-bg   { background: $dkblue; color: $white; }
 .offwhite-bg { background: rgba($offwhite,.5); }
+.tan-bg    { background: tint($tan,70); }
 
 @include headings($base-font-size, $heading-scale);
 @for $i from 1 through 6 {
