@@ -376,7 +376,7 @@
             }
 
           }
-          .swiper-control-buttons { right: 20px; bottom: auto; }
+          .swiper-control-buttons { right: 20px; bottom: 35%; }
         }
       }
     }
@@ -899,10 +899,10 @@
           .floorplan-slide-container {
             .swiper-wrapper {
               .swiper-slide { flex-basis: 48%;
-                .floorplan-details { flex-basis: 75%; }
+                .floorplan-details { flex-basis: 90%; }
               }
             }
-            .swiper-control-buttons { right: 25px; }
+            .swiper-control-buttons { right: 25px; bottom: 30%; }
           }
         }
       }

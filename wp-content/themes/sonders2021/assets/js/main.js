@@ -94,13 +94,13 @@ $(document).ready(function(){
     $('html, body').removeClass('stuck');
   });
 
-  var fpImage = $('.floorplan-slide-container .swiper-wrapper .swiper-slide').first().find('img').height();
-  $('.builder-floorplans .slider-controls').css('top', (fpImage - 15) + 'px');
-
-  $(window).resize(function(){
-    var fpImage = $('.floorplan-slide-container .swiper-wrapper .swiper-slide').first().find('img').height();
-    $('.builder-floorplans .slider-controls').css('top', (fpImage - 15) + 'px');
-  });
+  // var fpImage = $('.floorplan-slide-container .swiper-wrapper .swiper-slide').first().find('img').height();
+  // $('.builder-floorplans .slider-controls').css('top', (fpImage - 15) + 'px');
+	//
+  // $(window).resize(function(){
+  //   var fpImage = $('.floorplan-slide-container .swiper-wrapper .swiper-slide').first().find('img').height();
+  //   $('.builder-floorplans .slider-controls').css('top', (fpImage - 15) + 'px');
+  // });
 
 	$(window).scroll(function(){
 		if($(this).scrollTop() > 100){

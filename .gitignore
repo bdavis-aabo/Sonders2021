@@ -40,6 +40,10 @@ email-images/*
 survey-images/*
 dev/*
 
+/wp-content/smush-webp/*
+/wp-content/advanced-cache.php
+/wp-content/wphb-cache/*
+
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
