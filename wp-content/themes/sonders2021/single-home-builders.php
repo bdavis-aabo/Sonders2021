@@ -81,11 +81,15 @@
       <div class="builder-office-container">
         <h2 class="builder-name"><?php the_title() ?></h2>
         <div class="office-left">
-          <span class="caps">Model home and sales office</span>
+          <?php if(!is_single('thrive-home-builders')): ?>
+						<span class="caps">Model home and sales office</span>
+					<?php else: ?>
+						<span class="caps">sales office</span>
+					<?php endif; ?>
           <p><?php echo get_field('homebuilder_address') . '<br />' . get_field('homebuilder_phone')?></p>
         </div>
         <div class="office-right">
-          <span class="caps">sales office is open daily</span>
+          <span class="caps">sales office</span>
           <p><?php echo get_field('homebuilder_hours') ?></p>
         </div>
         <div class="office-bottom">
