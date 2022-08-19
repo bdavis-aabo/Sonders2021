@@ -84,12 +84,12 @@
           <?php if(!is_single('thrive-home-builders')): ?>
 						<span class="caps">Model home and sales office</span>
 					<?php else: ?>
-						<span class="caps">sales office</span>
+						<span class="caps">sales office and design center</span>
 					<?php endif; ?>
           <p><?php echo get_field('homebuilder_address') . '<br />' . get_field('homebuilder_phone')?></p>
         </div>
         <div class="office-right">
-          <span class="caps">sales office</span>
+          <span class="caps">sales office hours</span>
           <p><?php echo get_field('homebuilder_hours') ?></p>
         </div>
         <div class="office-bottom">
