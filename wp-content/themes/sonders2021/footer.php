@@ -52,6 +52,8 @@
 		<?php endif; ?>
 	<?php endif; ?>
 
+	<?php if(is_front_page()): get_template_part('home/home-promotion'); endif; ?>
+
 <?php wp_footer(); ?>
 
 </html>
