@@ -155,6 +155,53 @@ function create_promos(){
   ));
 }
 
+
+// QUICK MOVE-IN POST TYPE
+add_action('init','create_quick_moves');
+function create_quick_moves(){
+  register_post_type('quickmoves',array(
+    'label'           =>	__('Quick Move-Ins'),
+		'singular_label'	=>	__('Quick Move-In'),
+		'public'          =>	true,
+		'show_ui'         =>	true,
+		'capability_type'	=>	'post',
+		'hierarchical'		=>	'true',
+		'rewrite'         =>	array('slug' => 'quick-moveins'),
+		'supports'        =>	array('title','custom-fields','order','page-attributes'),
+		'menu_position'		=>	22,
+		'menu_icon'       =>	'dashicons-admin-home',
+		'has_archive'     =>	true,
+  ));
+}
+
+// Create Builder Taxonomies
+add_action('init','builder_taxonomies',0);
+function builder_taxonomies(){
+  $_labels = array(
+    'name'              =>	_x('Builders','taxonomy general name'),
+		'singular_name'     =>	_x('Builder', 'taxonomy singular name'),
+		'search_items'		  =>	__('Search Builders'),
+		'all_items'         =>	__('All Builders'),
+		'parent_item'       =>	__('Parent Builder'),
+		'parent_item_colon'	=>	__('Parent Builder:'),
+		'edit_item'         =>	__('Edit Builder'),
+		'update_item'       =>	__('Update Builder'),
+		'add_new_item'      =>	__('Add New Builder'),
+		'new_item_name'     =>	__('New Builder Name'),
+		'menu_name'         =>	__('Builders'),
+  );
+  $_args = array(
+    'hierarchical'      =>	true,
+		'labels'            =>	$_labels,
+		'show_ui'           =>	true,
+		'show_admin_column'	=>	true,
+		'update_count_callback' => '_update_post_term_count',
+		'query_var'         =>	true,
+		'rewrite'           =>	array('slug' => 'builder'),
+  );
+  register_taxonomy('builder','quickmoves',$_args);
+}
+
 // Custom Taxonomy : Community Map Sections
 add_action('init', 'map_taxonomies', 0);
 function map_taxonomies(){

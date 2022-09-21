@@ -173,6 +173,29 @@
     }
   }
 
+	// QUICK MOVE-IN HOME STYLES
+	&.qmi-builder-section {
+		.builder-section-content { flex-basis: 80%; text-align: center;
+			.builder-title { font-size: 30px; margin-bottom: 6px; }
+			.builder-details { font-size: 14px; font-weight: 400; text-transform: uppercase;
+				h3 { font-weight: 400; font-size: 18px; }
+				strong { display: block; }
+			}
+		}
+	}
+	&.qmihomes-section {
+		.qmihomes-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+			.qmi-home { margin-bottom: 2rem;
+				.home-details { text-align: center;
+					.home-title { font-size: 21px; font-weight: normal; margin-bottom: 5px; }
+					.home-price,
+					.home-information { margin-bottom: .5rem; text-transform: uppercase; }
+					.home-price { font-weight: 700; font-size: 16px; color: $aqua; }
+				}
+			}
+		}
+	}
+
   // ADVISORS PAGE STYLES
   &.advisors-section { padding-top: 0;
     .advisors-container {
@@ -628,6 +651,20 @@
       }
     }
 
+		// QUICK MOVE-IN HOME STYLES
+		&.qmihomes-section {
+			.qmihomes-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+				.qmi-home { margin-bottom: 2rem;
+					.home-details { text-align: center;
+						.home-title { font-size: 24px; font-weight: normal; margin-bottom: 5px; }
+						.home-price,
+						.home-information { margin-bottom: .5rem; text-transform: uppercase; }
+						.home-price { font-weight: 700; font-size: 18px; color: $aqua; }
+					}
+				}
+			}
+		}
+
 		&.custom-homes-section { padding-top: 0; padding-bottom: 0;
 			.custom-homes-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
 				.home-lots { margin: 0 0 45px; }
@@ -853,6 +890,30 @@
       }
     }
 
+		// QUICK MOVE-IN HOME STYLES
+		&.qmi-builder-section {
+			.builder-section-content { flex-basis: 80%; text-align: center;
+				.builder-title { font-size: 32px; margin-bottom: 6px; }
+				.builder-details { font-size: 16px; font-weight: 400; text-transform: uppercase;
+					h3 { font-weight: 400; font-size: 21
+						px; }
+					strong { display: block; }
+				}
+			}
+		}
+		&.qmihomes-section {
+			.qmihomes-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+				.qmi-home { margin-bottom: 2rem; flex-basis: 48%;
+					.home-details { text-align: center;
+						.home-title { font-size: 21px; font-weight: normal; margin-bottom: 5px; }
+						.home-price,
+						.home-information { margin-bottom: .25rem; text-transform: uppercase; }
+						.home-price { font-weight: 700; font-size: 16px; color: $aqua; }
+					}
+				}
+			}
+		}
+
 		&.custom-homes-section { padding-top: 0; padding-bottom: 0;
 			.custom-homes-container { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; flex-basis: 90%;
 				.home-lots { margin: 0; flex-basis: 42%; }
@@ -1010,8 +1071,6 @@
           .learning-left  {}
         }
       }
-
-
     }
     &.land-section {
 	    .land-container {
@@ -1046,6 +1105,20 @@
         }
       }
     }
+
+		// QUICK MOVE-IN HOME STYLES
+		&.qmihomes-section {
+			.qmihomes-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+				.qmi-home { margin-bottom: 0; flex-basis: 32%; margin: 0 1rem 2rem;
+					.home-details { text-align: center;
+						.home-title { font-size: 21px; font-weight: normal; margin-bottom: 5px; }
+						.home-price,
+						.home-information { margin-bottom: .25rem; text-transform: uppercase; }
+						.home-price { font-weight: 700; font-size: 16px; color: $aqua; }
+					}
+				}
+			}
+		}
   }
 
   // SINGLE BUILDER STYLES
