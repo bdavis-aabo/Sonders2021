@@ -241,6 +241,30 @@
       p  { text-transform: uppercase; color: $aqua; font-size: 18px; font-weight: 700; margin: 0; }
     }
   }
+
+	// HOMEBUILDER SEGMENTATION
+	&.homebuilders-segments {
+		.segment-container { flex-basis: 90%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+			.homebuilder-segment { padding: 1rem 0; display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
+				&:first-child { border-bottom: 1px solid $white; margin-top: 0;
+					.segment-right {
+						.builder-logo { width: 50%; }
+					}
+				}
+				&:last-child { margin-bottom: 0; }
+				.segment-left { flex-basis: 50%;
+					.link { color: $white;
+						.arrow-icon {
+							g { stroke: $white; }
+							.arrow-icon--circle { stroke: $white; }
+						}
+					}
+				}
+				.segment-right { text-align: center; flex-basis: 50%; }
+			}
+		}
+	}
+
   &.homebuilders-section { display: block;
     .homebuilder-container { padding-left: 1.5rem; padding-right: 1.5rem;
       .builder { margin-bottom: 2.5rem;
@@ -650,6 +674,29 @@
         .parks-right { text-align: center; flex-basis: 65%; }
       }
     }
+
+		// HOMEBUILDER SEGMENTATION
+		&.homebuilders-segments {
+			.segment-container { flex-basis: 90%; display: flex; flex-wrap: nowrap; justify-content: space-between; align-items: center;
+				.homebuilder-segment { flex-basis: 48%; padding: 1rem 0; display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
+					&:first-child { border-bottom: none; border-right: 1px solid $white; margin-top: 0;
+						.segment-right { text-align: center;
+							.builder-logo { width: 50%; }
+						}
+					}
+					&:last-child { margin-bottom: 0; }
+					.segment-left { flex-basis: 50%;
+						.link { color: $white;
+							.arrow-icon {
+								g { stroke: $white; }
+								.arrow-icon--circle { stroke: $white; }
+							}
+						}
+					}
+					.segment-right { flex-basis: 50%; }
+				}
+			}
+		}
 
 		// QUICK MOVE-IN HOME STYLES
 		&.qmihomes-section {
@@ -1105,6 +1152,31 @@
         }
       }
     }
+
+		// HOMEBUILDER SEGMENTATION
+		&.homebuilders-segments {
+			.segment-container { flex-basis: 85%; display: flex; flex-wrap: nowrap; justify-content: space-between; align-items: center;
+				.homebuilder-segment { flex-basis: 48%; padding: 1rem 0; display: flex; flex-wrap: nowrap; justify-content: center;
+					align-items: center;
+					&:first-child { border-bottom: none; border-right: 1px solid $white; margin-top: 0;
+						.segment-right {
+							.builder-logo { width: 50%; }
+						}
+					}
+					&:last-child { margin-bottom: 0; }
+					.segment-left { flex-basis: 60%;
+						.segment-title { font-size: 32px; }
+						.link { color: $white;
+							.arrow-icon {
+								g { stroke: $white; }
+								.arrow-icon--circle { stroke: $white; }
+							}
+						}
+					}
+					.segment-right { flex-basis: 40%; }
+				}
+			}
+		}
 
 		// QUICK MOVE-IN HOME STYLES
 		&.qmihomes-section {

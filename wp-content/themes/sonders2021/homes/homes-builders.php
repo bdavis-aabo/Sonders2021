@@ -11,6 +11,25 @@
 ?>
 
   <?php if($_builders->have_posts()): ?>
+	<section class="page-section homebuilders-segments blue-bg">
+		<div class="segment-container">
+			<?php while($_builders->have_posts()): $_builders->the_post(); $_reverseLogo = get_field('homebuilder_reverse_logo'); ?>
+			<article class="homebuilder-segment">
+				<div class="segment-left">
+					<h2 class="white-txt segment-title"><?php echo get_field('homebuilder_segment') ?></h2>
+					<a href="<?php the_permalink() ?>" title="<?php the_title() ?>" class="link link--arrowed white-text">
+            Learn More <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+          </a>
+				</div>
+				<div class="segment-right">
+					<img src="<?php echo $_reverseLogo['url'] ?>" class="img-fluid builder-logo" alt="<?php the_title() ?> - logo" />
+				</div>
+			</article>
+			<?php endwhile; ?>
+		</div>
+	</section>
+
+
   <section class="page-section homebuilders-section">
     <div class="homebuilder-container">
     <?php while($_builders->have_posts()): $_builders->the_post(); $_builderImages = get_field('homebuilder_image'); $_logo = get_field('homebuilder_logo'); ?>

@@ -18,7 +18,9 @@
       </div>
     </section>
 
-    <?php if(is_page('homes')): get_template_part('homes/homes-builders'); endif; ?>
+    <?php if(is_page('homes')):
+			get_template_part('homes/homes-builders');
+		endif; ?>
 
 		<?php if(get_field('custom_homes_content') != ''): $_lotImage = get_field('custom_homes_lots'); ?>
 		<section class="page-section custom-homes-section tan-bg">
