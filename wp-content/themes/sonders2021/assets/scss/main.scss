@@ -678,13 +678,13 @@
 		// HOMEBUILDER SEGMENTATION
 		&.homebuilders-segments {
 			.segment-container { flex-basis: 90%; display: flex; flex-wrap: nowrap; justify-content: space-between; align-items: center;
-				.homebuilder-segment { flex-basis: 48%; padding: 1rem 0; display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
+				.homebuilder-segment { flex-basis: 50%; padding: 1rem 0; display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
 					&:first-child { border-bottom: none; border-right: 1px solid $white; margin-top: 0;
 						.segment-right { text-align: center;
 							.builder-logo { width: 50%; }
 						}
 					}
-					&:last-child { margin-bottom: 0; }
+					&:last-child { margin-bottom: 0; padding-left: 1.5rem; }
 					.segment-left { flex-basis: 50%;
 						.link { color: $white;
 							.arrow-icon {
@@ -1156,7 +1156,7 @@
 		// HOMEBUILDER SEGMENTATION
 		&.homebuilders-segments {
 			.segment-container { flex-basis: 85%; display: flex; flex-wrap: nowrap; justify-content: space-between; align-items: center;
-				.homebuilder-segment { flex-basis: 48%; padding: 1rem 0; display: flex; flex-wrap: nowrap; justify-content: center;
+				.homebuilder-segment { padding: 1rem 0; display: flex; flex-wrap: nowrap; justify-content: center;
 					align-items: center;
 					&:first-child { border-bottom: none; border-right: 1px solid $white; margin-top: 0;
 						.segment-right {
