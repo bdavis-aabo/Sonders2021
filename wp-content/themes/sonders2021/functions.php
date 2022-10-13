@@ -231,22 +231,11 @@ function map_taxonomies(){
 }
 
 // Add Class to Images posted on pages
-function add_responsive_class($content){
-  $content = mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8');
-  $document = new DOMDocument();
-  libxml_use_internal_errors(true);
-  if(!empty($document)){
-    $document->loadHTML(utf8_decode($content));
-  }
-  $imgs = $document->getElementsByTagName('img');
-  foreach($imgs as $img){
-    $existing_class = $img->getAttribute('class');
-    $img->setAttribute('class', 'img-fluid ' . $existing_class);
-  }
-  $html = $document->saveHTML();
-	return $html;
+function add_responsive_class($class){
+  $class .= ' img-fluid';
+	return $class;
 }
-add_filter('the_content', 'add_responsive_class');
+add_filter('get_image_tag_class', 'add_responsive_class');
 
 function get_post_categories(){
   $_categories = get_the_category();
@@ -293,19 +282,5 @@ function get_id_slug($slug){
   }
 }
 
-// function file_get_contents_curl($url) {
-//     $ch = curl_init();
-//
-//     curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
-//     curl_setopt($ch, CURLOPT_HEADER, 0);
-//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-//     curl_setopt($ch, CURLOPT_URL, $url);
-//     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
-//
-//     $data = curl_exec($ch);
-//     curl_close($ch);
-//
-//     return $data;
-// }
 
 ?>
