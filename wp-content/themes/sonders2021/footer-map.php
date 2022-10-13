@@ -1,7 +1,7 @@
 <footer class="footer map-footer">
   <section class="footer-top">
     <div class="footer-logo-container">
-      <?php echo file_get_contents(get_template_directory() . '/assets/images/sonders-headerLogo.svg') ?>
+      <?php echo file_get_contents_curl(get_template_directory() . '/assets/images/sonders-headerLogo.svg') ?>
     </div>
     <div class="footer-right">
       <p class="disclaimer">

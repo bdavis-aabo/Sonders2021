@@ -36,7 +36,7 @@
   <div class="community-section-container">
     <?php echo get_field('homepage_community_content') ?>
     <a href="/community" title="<?php bloginfo('name'); ?> - Community" class="link link--arrowed">
-      Explore the Community <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+      Explore the Community <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
     </a>
   </div>
 </section>

@@ -261,7 +261,7 @@ function get_post_categories(){
 
 function modify_read_more_link(){
   $_moreLink = '<a class="link link--arrowed" href="' . get_permalink() . '">';
-  $_moreLink .= file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg');
+  $_moreLink .= file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg');
   $_moreLink .= '</a>';
 
   return $_moreLink;
@@ -291,6 +291,21 @@ function get_id_slug($slug){
   } else {
     return null;
   }
+}
+
+function file_get_contents_curl($url) {
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+
+    $data = curl_exec($ch);
+    curl_close($ch);
+
+    return $data;
 }
 
 ?>

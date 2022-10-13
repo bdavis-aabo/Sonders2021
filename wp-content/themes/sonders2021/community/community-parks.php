@@ -9,7 +9,7 @@
       <?php echo get_sub_field('parks_content') ?>
 
       <a href="/community/parks-and-trails" class="link link--arrowed" title="Sonders Parks and Trails">
-        Explore all Parks and Trails  <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+        Explore all Parks and Trails  <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
       </a>
     </div>
     <?php endwhile; ?>

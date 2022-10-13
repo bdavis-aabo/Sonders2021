@@ -17,7 +17,7 @@
       <div class="learning-right">
         <?php echo get_sub_field('center_content') ?>
         <a href="/community/sonders-learning-center" class="link link--arrowed" title="Sonders Learning Center">
-          Sonders Learning Center  <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+          Sonders Learning Center  <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
         </a>
       </div>
     </div>

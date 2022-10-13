@@ -20,7 +20,7 @@
       <h2>Welcome to the Sonders Interactive Map</h2>
       <p>It looks like you're on a mobile device, and this map is only viewable on a tablet (in landscape orientation) or computer. Sorry about that. For now, you can download the community map to get your bearings.</p>
       <a href="<?php bloginfo('template_directory') ?>/assets/images/pdfs/Sonders_Community Map_v03.pdf" class="link link--arrowed" target="_blank">
-        Download PDF Map <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+        Download PDF Map <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
       </a>
     </div>
   </section>

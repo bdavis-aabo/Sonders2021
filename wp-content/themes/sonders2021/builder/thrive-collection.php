@@ -30,7 +30,7 @@
 
 					<p class="floorplan-video-link">
 					<?php if(get_sub_field('floorplan_video') != ''): ?>
-					<a class="link link--arrowed floorplan-tour-btn" data-target="#<?php echo str_replace(' ', '-',strtolower(get_sub_field('floorplan_name') . '-video')) ?>">Video Tour <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?></a>
+					<a class="link link--arrowed floorplan-tour-btn" data-target="#<?php echo str_replace(' ', '-',strtolower(get_sub_field('floorplan_name') . '-video')) ?>">Video Tour <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?></a>
 					<?php else: ?>
 					&nbsp;
 					<?php endif; ?>
@@ -41,10 +41,10 @@
 			</ul>
 			<div class="slider-controls swiper-control-buttons">
 				<button class="slide-prev">
-					<?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
+					<?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
 				</button>
 				<button class="slide-next">
-					<?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
+					<?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
 				</button>
 			</div>
 		</div>

@@ -8,7 +8,7 @@
     <div class="parks-right">
       <?php echo get_sub_field('land_content') ?>
       <a href="/advisors" class="link link--arrowed" title="Sonders Advisors & Partnerships">
-        View Advisors <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+        View Advisors <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
       </a>
 			<?php echo get_field('vision_secondary') ?>
     </div>

@@ -27,7 +27,7 @@
             <p class="postmeta"><?php echo get_the_date('F Y'); ?> | <?php echo get_post_categories(); ?></p>
             <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="link link--arrowed">
               <h3 class="article-title"><?php the_title(); ?></h3>
-              Read More <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+              Read More <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
             </a>
           </div>
         </article>

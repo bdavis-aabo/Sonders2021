@@ -1,7 +1,7 @@
   <footer class="footer">
     <section class="footer-top ltblue-bg">
       <div class="footer-logo-container">
-        <?php echo file_get_contents(get_template_directory() . '/assets/images/sonders-headerLogo.svg') ?>
+        <?php echo file_get_contents_curl(get_template_directory() . '/assets/images/sonders-headerLogo.svg') ?>
       </div>
     </section>
     <section class="footer-bottom aqua-bg">
@@ -22,7 +22,7 @@
   </footer>
 
   <button class="top-btn link link--arrowed">
-	  <?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?><br/>
+	  <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?><br/>
 	  Back to Top
   </button>
 
@@ -31,7 +31,7 @@
 	<?php if(is_front_page()): ?>
 		<?php if(have_rows('forum_callout')): ?>
 		<div class="forum-button-container">
-			<?php echo file_get_contents(get_template_directory_uri() . '/assets/images/sonders_outline.svg') ?>
+			<?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/sonders_outline.svg') ?>
 			<?php while(have_rows('forum_callout')): the_row(); ?>
 				<button class="forum-btn" onclick="location.href='/sonders-forum'">
 			  	<div class="forum-contents">
@@ -41,7 +41,7 @@
 			    	<div class="white-xbg">
 			    		<p><?php echo get_sub_field('callout_content') ?></p>
 							<div class="start">
-								<p>Start the Survey </p><?php echo file_get_contents(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
+								<p>Start the Survey </p><?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
 							</div>
 			    	</div>
 			  	</div>
