@@ -36,7 +36,7 @@
   <header class="header <?php if(!is_front_page()): echo 'white-bg no-scroll-effect'; endif; ?>">
     <section class="header-top">
       <a href="<?php bloginfo('url') ?>" class="navbar-logo">
-        <img src="<?php echo file_get_contents(get_template_directory() . '/assets/images/sonders-headerLogo.svg') ?>" class="img-fluid logo" />
+        <?php echo file_get_contents(get_template_directory() . '/assets/images/sonders-headerLogo.svg') ?>
       </a>
       <button class="nav-btn" type="button">
         <span class="nav-iconbar"></span>
