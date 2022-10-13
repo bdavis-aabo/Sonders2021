@@ -3,7 +3,7 @@
 		$_builder = get_sub_field('builder_name');
     $_builderID     = strtolower(str_replace(' ', '_', $_builder));
     $_builderImages = get_sub_field('builder_images');
-    $_imageCount = count($_builderImages);
+    $_imageCount = count((array)$_builderImages);
   ?>
   <article class="feature-card hyde" id="<?php echo $_builderID ?>">
     <button class="close-card"><i class="fal fa-times"></i></button>

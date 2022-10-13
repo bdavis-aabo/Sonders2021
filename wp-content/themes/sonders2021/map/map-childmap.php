@@ -46,7 +46,7 @@
       $_pointID     = str_replace(',', '', $_pointID);
       $_pointIcon   = get_sub_field('point_icon');
       $_pointImages = get_sub_field('point_images');
-      $_imageCount  = count($_pointImages);
+      $_imageCount  = count((array)$_pointImages);
     ?>
     <article class="feature-card hyde" id="<?php echo $_pointID; ?>">
       <button class="close-card"><i class="fal fa-times"></i></button>
