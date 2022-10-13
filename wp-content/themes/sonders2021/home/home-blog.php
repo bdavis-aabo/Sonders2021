@@ -39,6 +39,9 @@
               <p class="postmeta"><?php echo get_the_date('F Y'); ?> | <?php echo get_post_categories(); ?></p>
 							<h3 class="article-title"><?php the_title(); ?></h3>
 							<?php the_content(); ?>
+							<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="link link--arrowed">
+								<?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?>
+							</a>
             </div>
           </article>
         <?php endwhile; wp_reset_query(); ?>

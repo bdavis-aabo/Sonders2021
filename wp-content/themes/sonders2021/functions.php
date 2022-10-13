@@ -260,9 +260,9 @@ function get_post_categories(){
 }
 
 function modify_read_more_link(){
-  $_moreLink = '<a class="link link--arrowed" href="' . get_permalink() . '">';
-  $_moreLink .= file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg');
-  $_moreLink .= '</a>';
+  $_moreLink = '&nbsp;';
+  //$_moreLink .= file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg');
+  //$_moreLink .= '</a>';
 
   return $_moreLink;
 }
