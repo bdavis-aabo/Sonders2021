@@ -39,10 +39,10 @@
 
         <div class="slider-controls swiper-control-buttons <?php if($_postCount <= 2): ?>noshow<?php endif; ?>">
           <button class="slide-prev">
-            <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
+            <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow.svg') ?>
           </button>
           <button class="slide-next">
-            <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
+            <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow.svg') ?>
           </button>
         </div>
       </div>
@@ -50,7 +50,7 @@
     <div class="builder-right">
       <a href="/homes" title="<?php bloginfo('name'); ?> - Homes" class="link link--arrowed">
         View the Homes
-        <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+        <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?>
       </a>
     </div>
   </section>

@@ -15,10 +15,10 @@
           </div>
           <div class="slider-controls swiper-control-buttons">
             <button class="slide-prev">
-              <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
+              <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow.svg') ?>
             </button>
             <button class="slide-next">
-              <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow.svg') ?>
+              <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow.svg') ?>
             </button>
           </div>
         </div>
@@ -43,7 +43,7 @@
       <div class="location-contents">
         <?php echo get_field('homepage_location_content') ?>
         <a href="/location" title="<?php bloginfo('name'); ?> - Location" class="link link--arrowed">
-          View Location <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+          View Location <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?>
         </a>
       </div>
     </div>

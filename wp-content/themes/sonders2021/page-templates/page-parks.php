@@ -14,7 +14,7 @@
 
   <section class="page-section community-breadcrumb">
     <a href="/community/" title="<?php the_title() ?>" class="link link--arrowed flip--arrowed">
-      <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?> Back to Community Page
+      <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?> Back to Community Page
     </a>
   </section>
 

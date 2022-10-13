@@ -18,11 +18,11 @@
       <?php the_content(); ?>
 
 			<a href="/wp-content/uploads/2022/08/Sonders-FAQ-Handout-v2.pdf" class="link link--arrowed" title="Sonders FAQ" target="_blank">
-        Download Sonders FAQ  <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+        Download Sonders FAQ  <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?>
       </a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 			<a href="/wp-content/uploads/2022/02/Sonders-Brochure-2.0.pdf" class="link link--arrowed" title="Sonders Brochure" target="_blank">
-        Download Sonders Brochure  <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+        Download Sonders Brochure  <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?>
       </a>
     </div>
   </section>

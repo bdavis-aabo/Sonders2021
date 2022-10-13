@@ -31,7 +31,7 @@
 					<?php if(get_field('homebuilder_link') != ''): ?>
 					<li class="home-type floorplan-link">
 						<a href="<?php echo get_field('homebuilder_link') ?>" target="_blank" class="link link--arrowed" title="<?php the_title() ?>">
-							View the floorplans <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+							View the floorplans <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?>
 	          </a>
 					</li>
 					<?php endif; ?>
@@ -95,12 +95,12 @@
         <div class="office-bottom">
           <a title="<?php bloginfo('name'); ?> - Homes" class="link link--arrowed builderContact-btn" data-builder="<?php the_title() ?>">
             Request Information
-            <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+            <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?>
           </a>
 		<?php if(get_field('homebuilder_link') != ''): ?>
 		<a href="<?php echo get_field('homebuilder_link') ?>" class="link link--arrowed builderContact-btn" title="<?php the_title() ?>" target="_blank">
 	          Visit <?php the_title() ?>
-	          <?php echo file_get_contents_curl(get_template_directory_uri() . '/assets/images/icons/arrow-icon.svg') ?>
+	          <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?>
 	     </a>
 		<?php endif; ?>
         </div>
