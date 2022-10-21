@@ -19,7 +19,12 @@
                 <?php the_title(); ?>
               </a>
             </h3>
-          <div class="content-container"><?php the_content(); ?></div>
+          <div class="content-container">
+						<?php the_content(); ?>
+						<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="link link--arrowed">
+							Read More <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?>
+						</a>
+					</div>
         </div>
       </article>
       <?php endwhile; ?>

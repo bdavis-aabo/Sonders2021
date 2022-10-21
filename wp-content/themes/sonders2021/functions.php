@@ -240,7 +240,8 @@ add_filter('get_image_tag_class', 'add_responsive_class');
 function get_post_categories(){
   $_categories = get_the_category();
   $_sep = ' ';
-	$_output;
+	$_output = '';
+	
   if(!empty($_categories)){
     foreach($_categories as $_category){
       $_output .= '<a href="' . esc_url(get_category_link($_category->term_id)) . '" alt="' . esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $_category->name)) . '">' . esc_html($_category->name) . '</a>' . $_sep;
