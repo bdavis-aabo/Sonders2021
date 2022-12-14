@@ -22,7 +22,8 @@
           <li class="home-type"><?php echo get_field('homebuilder_type') ?></li>
           <?php if(have_rows('homebuilder_model_details')): while(have_rows('homebuilder_model_details')): the_row(); ?>
             <?php if(get_sub_field('square_footage') != ''): ?>
-            <li><?php echo get_sub_field('square_footage') . ' sq ft' ?></li>
+            <li><?php echo get_field('homebuilder_pricing') ?></li>
+						<li><?php echo get_sub_field('square_footage') . ' sq ft' ?></li>
             <li class="home-bed"><?php echo get_sub_field('beds') . ' bedrooms' ?></li>
             <li class="home-bath"><?php echo get_sub_field('baths') . ' bathrooms' ?></li>
             <li><?php echo get_sub_field('garage') . ' car garage' ?></li>

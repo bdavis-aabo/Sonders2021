@@ -61,14 +61,20 @@
         <div class="builder-details">
           <img src="<?php echo $_logo['url'] ?>" alt="<?php the_title() ?>" class="img-fluid" />
           <h2 class="builder-name"><?php the_title() ?></h2>
-          <p class="builder-product"><?php echo get_field('homebuilder_type') ?></p>
+          <p class="builder-product">
+						<?php echo get_field('homebuilder_type') ?>
+					</p>
 
 					<p class="builder-info">
-            <?php if(have_rows('homebuilder_model_details')): while(have_rows('homebuilder_model_details')): the_row(); ?>
+						<?php if(get_field('homebuilder_pricing') != ''): ?>
+							<?php echo get_field('homebuilder_pricing') ?><br/>
+						<?php endif; ?>
+						<?php if(have_rows('homebuilder_model_details')): while(have_rows('homebuilder_model_details')): the_row(); ?>
 							<?php if(get_sub_field('square_footage') != ''):
 								echo 'Approx. ' . get_sub_field('square_footage') . ' sq ft | ' . get_sub_field('beds') . ' beds | ' . get_sub_field('baths') . ' baths';
 							endif; ?>
 						<?php endwhile; endif; ?>
+
           </p>
 
           <?php echo get_field('homebuilder_introduction'); ?>

@@ -99,6 +99,16 @@ html, body {
   }
 }
 
+.envira-tags-filter-list { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+	margin-bottom: 30px !important;
+	* { text-transform: capitalize !important; font-size: .95em !important; }
+	li {
+		&.envira-tags-filter,
+		&.envira-tag-filter { float: none !important; margin: 0 !important; padding: 4px 15px; }
+		a { color: $dkgray; }
+	}
+}
+
 
 /*** SMALL DEVICES : Landscape phones, 576px + ***/
 @media (min-width: 576px){

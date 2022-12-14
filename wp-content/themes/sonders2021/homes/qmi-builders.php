@@ -50,7 +50,7 @@ get qmi homes by builder
 				<p class="home-information">
 					<?php echo get_field('qmi_square_footage') . ' sq ft | ' . get_field('qmi_bedrooms') . ' beds | ' . get_field('qmi_bathrooms') . ' baths | ' . get_field('qmi_garage'); ?>
 				</p>
-				<a href="<?php echo get_field('qmi_link') ?>" title="view home" class="link link--arrowed">
+				<a href="<?php echo get_field('qmi_link') ?>" title="view home" class="link link--arrowed" target="_blank">
           View home <?php echo file_get_contents(get_template_directory() . '/assets/images/icons/arrow-icon.svg') ?>
         </a>
 			</div>

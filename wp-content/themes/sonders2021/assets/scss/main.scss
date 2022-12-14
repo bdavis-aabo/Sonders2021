@@ -343,6 +343,64 @@
       }
     }
   }
+
+	// CUSTOM HOMES VIP SECTION
+	&.custom-vip-section {
+		.section-content-container { flex-basis: 90%; text-align: center; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+			h2, h3 { color: $dkblue; }
+			h2 { line-height: 36px; }
+			h3 { font-family: 'Vollkorn'; text-transform: none; font-size: 28px; font-weight: 400; margin: 15px 0; }
+			ul { font-size: 15px; text-align: left; margin: 15px 0; padding: 0; }
+			p {
+				strong { text-transform: uppercase; color: $orange;
+					em { font-style: normal; color: $yellow; }
+				}
+				&:last-child { margin-top: 30px; margin-bottom: 0; }
+			}
+			.wpcf7-form {
+				.radio-group {
+					.one-full { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; font-size: 15px;
+						label { margin: 0; }
+						.wpcf7-form-control-wrap {
+							.wpcf7-form-control { padding-left: 10px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+								span.wpcf7-list-item { position: relative;
+									input { margin-top: 0; }
+								}
+							}
+						}
+					}
+				}
+				.wpcf7-radio {
+					input[type=radio]+span:before,
+					input[type=radio]+span:after { top: 0; }
+				}
+				p { text-align: left; padding-left: 0; }
+			}
+
+			&.thank-you-container {
+				ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+					li { flex-basis: 100%; background: $aqua; padding: 8px 0; margin-bottom: 20px; text-align: center;
+						a { text-transform: uppercase; color: $white; font-weight: 700; }
+					}
+				}
+			}
+		}
+	}
+	&.custom-homes-contact { padding-top: 0;
+		.custom-contact-container {
+			.home-lots-content {
+				.custom-realtors { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+					.realtor { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
+						&:first-child { border-bottom: 1px solid $yellow; }
+						.logo,
+						.realtor-contact { flex-basis: 50%; }
+						.logo { order: 1; }
+						.realtor-contact { order: 0; }
+					}
+				}
+			}
+		}
+	}
 }
 
 // GALLERY PAGE STYLES
@@ -729,6 +787,43 @@
 			}
 		}
 
+		// CUSTOM HOMES VIP SECTION
+		&.custom-vip-section {
+			.section-content-container { flex-basis: 90%; text-align: center; display: flex; flex-wrap: wrap; justify-content: center;
+				align-items: center;
+				h2, h3 { flex-grow: 1; flex-basis: 100%; }
+				ul { font-size: 15px; text-align: left; margin: 15px 0; padding: 0; }
+				p { flex-grow: 1; flex-basis: 100%;
+					strong { text-transform: uppercase; color: $orange;
+						em { font-style: normal; color: $yellow; }
+					}
+				}
+
+				&.thank-you-container {
+					ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+						li { flex-basis: 45%; background: $aqua; padding: 8px 0; margin: 0 20px 20px; text-align: center;
+							a { text-transform: uppercase; color: $white; font-weight: 700; }
+						}
+					}
+				}
+			}
+		}
+		&.custom-homes-contact { padding-top: 0;
+			.custom-contact-container {
+				.home-lots-content {
+					.custom-realtors { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+						.realtor { display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
+							&:first-child { border-bottom: none; border-right: 1px solid $yellow; }
+							.logo,
+							.realtor-contact { flex-basis: 50%; }
+							.logo { order: 1; }
+							.realtor-contact { order: 0; }
+						}
+					}
+				}
+			}
+		}
+
     // PARKS PAGE STYLES
     &.evernew-park-section {
       .evernew-container {
@@ -978,6 +1073,19 @@
 			}
 		}
 
+		&.custom-vip-section {
+			.section-content-container {
+				&.thank-you-container {
+					ul { flex-basis: 80%; list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+						li { flex-basis: 45%; background: $aqua; padding: 8px 0; margin: 0 20px 20px; text-align: center;
+							a { text-transform: uppercase; color: $white; font-weight: 700; }
+						}
+					}
+				}
+			}
+		}
+
+
     // LOCATION PAGE STYLES
     &.location-top-section {
       .location-section-contents { flex-basis: 90%; justify-content: space-between;
@@ -999,7 +1107,7 @@
       &.detail-section {
         .detail-container {
           .detail-list { justify-content: space-between;
-            li { flex-basis: 25%;
+            li { flex-basis: 20%;
               &:first-child { flex-grow: 1; flex-basis: 100%; }
             }
           }
